@@ -4,7 +4,8 @@
 
 # Model and Engine
 ## story map
-![image](https://github.com/mraf2019/Enlighter/assets/45257769/07348ba6-ac29-4600-8f13-892cfad07112)
+![image](https://github.com/mraf2019/Enlighter/assets/45257769/86444e59-0e0f-4aaf-b901-7742c1bc97f1)
+
 ## engine architecture
 ![image](https://github.com/mraf2019/Enlighter/assets/45257769/e64e245b-5632-48b0-811b-fd4661029f02)
 
