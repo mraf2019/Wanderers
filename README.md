@@ -1,6 +1,7 @@
 # Enlighter
 
 # Getting Started
+Unity 2022.3.0
 
 # Model and Engine
 ## story map
@@ -402,3 +403,11 @@ Retrieves detailed information about a specific card reached by the player.
 # View UI/UX
 
 # Team Roster
+| Name                      | Design                   | Programming              |
+| ------------------------- | ------------------------ | ------------------------ |
+| Qi Lei                    | System Design            | Front end                |
+| Lan Wang                  | Role Design              | Back end                 |
+| Zefang Wei                | Background Design        | Front end                |
+| Yiwei Zhang               | Role Design              | Back end                 |
+| Siyi Qian                 | Card & Map Design        | Back end                 |
+| Wanying Ji                | Card & Map Design        | Front end                |
