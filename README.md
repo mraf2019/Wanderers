@@ -1,7 +1,8 @@
 # Enlighter
 
 # Getting Started
-Unity 2022.3.0
+Unity Hub
+Unity 2022.3.2f1
 
 # Model and Engine
 ## story map
