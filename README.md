@@ -3,7 +3,7 @@
 # Getting Started
 Unity Hub
 
-Unity 2022.3.2f1
+Unity 2022.3.0f1
 
 # Model and Engine
 ## story map
