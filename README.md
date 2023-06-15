@@ -13,6 +13,7 @@ Unity 2022.3.0
 
 # APIs and Controller
 
+### Endpoint
 ##### `GET /players/{playerId}/cards`
 
 Retrieves the cards held by a specific player.
@@ -396,7 +397,7 @@ Retrieves detailed information about a specific card reached by the player.
   - `cardsNum` (int): The number of cards that the player have.
   - `speed` (float): The speed of the player.
   - `visible` (boolean): Indicates whether the card is visible to other players.
-### Endpoint
+
 
 ## Third-Party SDKs
 
