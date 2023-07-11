@@ -40,6 +40,6 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Move X", rb.velocity.x);
         animator.SetFloat("Move Y", rb.velocity.y);
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
     }
 }
