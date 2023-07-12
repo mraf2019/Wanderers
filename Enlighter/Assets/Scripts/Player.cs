@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public Joystick joystick;
     public float speed;
     private Rigidbody2D rb;
+    public int maxHealth = 100;
+    int currentHealth;
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
 
@@ -15,6 +17,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -41,5 +44,11 @@ public class Player : MonoBehaviour
         animator.SetFloat("Move X", rb.velocity.x);
         animator.SetFloat("Move Y", rb.velocity.y);
         //Debug.Log(rb.velocity);
+    }
+
+    void ChangeHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
     }
 }
