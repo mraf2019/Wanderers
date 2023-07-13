@@ -48,8 +48,13 @@ public class Player : MonoBehaviour
         animator.SetFloat("Move Y", rb.velocity.y);
     }
 
-    void ChangeHealth(int amount)
+    public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+    }
+
+    public void CollectCards(string name)
+    {
+        cards.Add(name);
     }
 }
