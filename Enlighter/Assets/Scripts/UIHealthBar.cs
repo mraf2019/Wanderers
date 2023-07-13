@@ -11,7 +11,7 @@ public class UIHealthBar : MonoBehaviour
     float originalSize;
     void Start()
     {
-        originalSize = mask.rectTransform.rect.width;
+        //originalSize = mask.rectTransform.rect.width;
     }
 
     // Update is called once per frame
