@@ -24,7 +24,6 @@ public class Joystick : MonoBehaviour
         joystick.transform.position = Input.mousePosition;
         joystickBg.transform.position = Input.mousePosition;
         joystickTouchPos = Input.mousePosition;
-        Debug.Log(joystickTouchPos);
     }
 
     public void Drag(BaseEventData b)

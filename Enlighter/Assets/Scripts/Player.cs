@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     public int maxHealth = 100;
+    public List<string> cards = new List<string>();
     int currentHealth;
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
@@ -18,6 +19,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        cards.Add("mutilated_dagger");
+        cards.Add("emergency_medicine_kit");
     }
 
     // Update is called once per frame
@@ -43,12 +46,10 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Move X", rb.velocity.x);
         animator.SetFloat("Move Y", rb.velocity.y);
-        //Debug.Log(rb.velocity);
     }
 
     void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
     }
 }
