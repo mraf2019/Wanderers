@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +8,18 @@ public class Loot : MonoBehaviour
     /// object (2D physics only).
     /// </summary>
     /// <param name="other">The other Collider2D involved in this collision.</param>
-    public List<string> cards;
+    public List<string> cards = new List<string>();
+    private List<GameObject> cardObjects = new List<GameObject>();
+
+    void Start()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            GameObject cardObject = GameObject.Find("Canvas/GameUI/Cards/Card" + i.ToString());
+            cardObjects.Add(cardObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
@@ -18,6 +28,11 @@ public class Loot : MonoBehaviour
             foreach (var card in cards)
             {
                 player.CollectCards(card);
+            }
+            foreach (var cardObject in cardObjects)
+            {
+                Card card = cardObject.GetComponent<Card>();
+                card.UpdateCard();
             }
             Destroy(gameObject);
         }

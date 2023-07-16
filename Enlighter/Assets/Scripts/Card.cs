@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +5,8 @@ public class Card : MonoBehaviour
 {
     public int idx;
     public Player player;
-    string name = "";
+    private string name = "";
+    private bool active = false;
     private Image img;
 
     // Start is called before the first frame update
@@ -21,11 +19,12 @@ public class Card : MonoBehaviour
             name = player.cards[idx];
             Sprite cardImg = Resources.Load<Sprite>("Cards/"+name);
             img.sprite = cardImg;
+            active = true;
         }
     }
 
     // Update is called once per frame
-    void Update()
+    public void UpdateCard()
     {
         int l = player.cards.Count;
         if (idx < l)
@@ -33,6 +32,7 @@ public class Card : MonoBehaviour
             name = player.cards[idx];
             Sprite cardImg = Resources.Load<Sprite>("Cards/" + name);
             img.sprite = cardImg;
+            active = true;
         }
     }
 }
