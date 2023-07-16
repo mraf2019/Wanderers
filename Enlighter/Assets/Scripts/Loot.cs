@@ -9,12 +9,16 @@ public class Loot : MonoBehaviour
     /// object (2D physics only).
     /// </summary>
     /// <param name="other">The other Collider2D involved in this collision.</param>
+    public List<string> cards;
     void OnTriggerEnter2D(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
 
         if (player != null){
-            player.CollectCards("mutilated_dagger");
+            foreach (var card in cards)
+            {
+                player.CollectCards(card);
+            }
             Destroy(gameObject);
         }
     }
