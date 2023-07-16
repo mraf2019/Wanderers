@@ -363,6 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23eaea9db8093a4f878e4bb63afce34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cards:
+  - mutilated_dagger
 --- !u!60 &50243801
 PolygonCollider2D:
   m_ObjectHideFlags: 0
