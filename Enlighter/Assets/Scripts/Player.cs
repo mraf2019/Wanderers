@@ -19,8 +19,6 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
-        cards.Add("mutilated_dagger");
-        cards.Add("emergency_medicine_kit");
     }
 
     // Update is called once per frame
