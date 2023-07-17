@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (joystick.joystickVec.y != 0)
         {
@@ -50,6 +50,10 @@ public class Player : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        if (amount < 0)
+        {
+            animator.SetTrigger("Hit");
+        }
         Debug.Log(currentHealth);
         UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
     }
