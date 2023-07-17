@@ -79,7 +79,7 @@ public class EnemyController : MonoBehaviour
         Debug.Log(currentHealth);
         if (currentHealth == 0)
         {
-            EventHander.CallGetGameOverEvent();
+            GameManager.Instance.PlayerDestroyed();
         }
     }
 
