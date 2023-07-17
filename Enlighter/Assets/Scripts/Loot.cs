@@ -24,7 +24,7 @@ public class EnemyLoot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
-
+        target.SetActive(false);
         if (player != null){
             foreach (var card in cards)
             {
@@ -38,6 +38,6 @@ public class EnemyLoot : MonoBehaviour
             Destroy(gameObject);
         }
         
-        target.SetActive(false);
+        
     }
 }
