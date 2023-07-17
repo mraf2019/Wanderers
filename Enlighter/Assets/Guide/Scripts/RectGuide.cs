@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class RectGuide : MonoBehaviour, ICanvasRaycastFilter
 {
+    private int changetime = 0;
     private Material material;
     private Vector3 center;
     private float width;
@@ -47,7 +48,10 @@ public class RectGuide : MonoBehaviour, ICanvasRaycastFilter
     }
 
     private void Update(){
-        GuideTarget(GameObject.Find("Canvas").GetComponent<Canvas>(), GameObject.Find(TargetName).GetComponent<RectTransform>());
+        if (changetime == 0){
+            GuideTarget(GameObject.Find("Canvas").GetComponent<Canvas>(), GameObject.Find(TargetName).GetComponent<RectTransform>());changetime++;
+        }
+        
     }
 
     public bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera)
