@@ -49,6 +49,9 @@ public class Card : MonoBehaviour
             Sprite cardImg = Resources.Load<Sprite>("Cards/" + card.name);
             img.sprite = cardImg;
             active = true;
+        } else
+        {
+            ClearCard();
         }
     }
 

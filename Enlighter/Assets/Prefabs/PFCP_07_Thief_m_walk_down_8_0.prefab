@@ -117,7 +117,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9159807846716753195}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -152,6 +152,11 @@ MonoBehaviour:
   roundTime: 0
   stopTime: 0
   maxHealth: 100
+  cards:
+  - name: emergency_medicine_kit
+    description: 
+    attack: 0
+    healthChange: 20
 --- !u!60 &-8109430799876555326
 PolygonCollider2D:
   m_ObjectHideFlags: 0

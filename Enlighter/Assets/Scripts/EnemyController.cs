@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
         timer = roundTime;
         animator = GetComponent<Animator>();
     }
@@ -76,6 +77,16 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth);
+    }
+
+    public Vector2 GetPos()
+    {
+        return rigidbody2d.position;
+    }
+
+    public int GetHealth()
+    {
+        return currentHealth;
     }
 
     public void OnPointerClick()
