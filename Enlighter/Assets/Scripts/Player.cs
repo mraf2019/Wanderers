@@ -46,10 +46,12 @@ public class Player : MonoBehaviour
         animator.SetFloat("Move Y", rb.velocity.y);
     }
 
+
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth);
+        UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
     }
 
     public void CollectCards(CardInfo card)

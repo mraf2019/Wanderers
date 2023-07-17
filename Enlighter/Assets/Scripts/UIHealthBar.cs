@@ -9,9 +9,13 @@ public class UIHealthBar : MonoBehaviour
     public static UIHealthBar instance { get; private set; }
     public Image mask;
     float originalSize;
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
-        //originalSize = mask.rectTransform.rect.width;
+        originalSize = mask.rectTransform.rect.width;
     }
 
     // Update is called once per frame
