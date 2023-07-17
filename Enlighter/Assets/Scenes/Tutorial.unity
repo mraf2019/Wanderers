@@ -2172,10 +2172,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8009143320003334878, guid: d79775a9500cff545943bee05834c5a7, type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 9159807846716753195, guid: d79775a9500cff545943bee05834c5a7, type: 3}
       propertyPath: m_Name
       value: PFCP_07_Thief_m_walk_down_8_0
@@ -37158,7 +37154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1882047702
 Transform:
   m_ObjectHideFlags: 0

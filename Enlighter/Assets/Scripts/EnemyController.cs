@@ -76,6 +76,10 @@ public class EnemyController : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        if (amount < 0)
+        {
+            animator.SetTrigger("Hit");
+        }
         Debug.Log(currentHealth);
         EnemyHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
         if (currentHealth == 0)
