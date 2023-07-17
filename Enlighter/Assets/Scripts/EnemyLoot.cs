@@ -12,6 +12,8 @@ public class EnemyLoot : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     public List<CardInfo> cards = new List<CardInfo>();
     public EnemyController enemy;
+    public GameObject targetF;
+    public GameObject targetT;
     private List<GameObject> cardObjects = new List<GameObject>();
     private Transform tf;
     private bool update = true;
@@ -44,7 +46,8 @@ public class EnemyLoot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
-
+        targetF.SetActive(false);
+        targetT.SetActive(true);
         if (player != null)
         {
             foreach (var card in cards)

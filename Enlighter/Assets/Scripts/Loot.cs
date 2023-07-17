@@ -10,7 +10,8 @@ public class Loot : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     public List<CardInfo> cards = new List<CardInfo>();
     private List<GameObject> cardObjects = new List<GameObject>();
-    public GameObject target;
+    public GameObject targetF;
+    public GameObject targetT;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class Loot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
-        target.SetActive(false);
+        targetF.SetActive(false);
+        targetT.SetActive(true);
         if (player != null){
             foreach (var card in cards)
             {
