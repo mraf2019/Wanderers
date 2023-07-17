@@ -7,7 +7,9 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public float roundTime;
     public float stopTime;
+    public int maxHealth = 100;
 
+    int currentHealth;
     Rigidbody2D rigidbody2d;
     float timer;
     float stopTimer;
@@ -67,5 +69,17 @@ public class EnemyController : MonoBehaviour
         //     animator.SetFloat("FaceX", 0);
         //     animator.SetFloat("FaceY", direction);
         // }
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth);
+    }
+
+    private void OnMouseDown()
+    {
+        // Notify the card manager (or other script) about the target selection
+        CardManager.Instance.OnTargetEnemySelected(this);
     }
 }

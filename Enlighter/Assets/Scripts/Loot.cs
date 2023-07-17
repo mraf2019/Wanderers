@@ -8,7 +8,7 @@ public class Loot : MonoBehaviour
     /// object (2D physics only).
     /// </summary>
     /// <param name="other">The other Collider2D involved in this collision.</param>
-    public List<string> cards = new List<string>();
+    public List<CardInfo> cards = new List<CardInfo>();
     private List<GameObject> cardObjects = new List<GameObject>();
 
     void Start()

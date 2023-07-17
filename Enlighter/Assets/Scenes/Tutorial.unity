@@ -364,7 +364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - mutilated_dagger
+  - name: mutilated_dagger
+    description: 
+    attack: 1
+    healthChange: -10
 --- !u!60 &50243801
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2575,6 +2578,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idx: 3
   player: {fileID: 293110346}
+  isSelected: 0
+  initialX: 0
+  initialY: 0
+  card:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
 --- !u!1001 &348015713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4438,6 +4449,7 @@ GameObject:
   - component: {fileID: 534845916}
   - component: {fileID: 534845915}
   - component: {fileID: 534845917}
+  - component: {fileID: 534845918}
   m_Layer: 5
   m_Name: Card1
   m_TagString: Untagged
@@ -4517,6 +4529,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idx: 0
   player: {fileID: 293110346}
+  isSelected: 0
+  initialX: 0
+  initialY: 0
+  card:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
+--- !u!114 &534845918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534845913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 534845917}
+          m_TargetAssemblyTypeName: Card, Assembly-CSharp
+          m_MethodName: OnPointerClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &534982336
 GameObject:
   m_ObjectHideFlags: 0
@@ -13575,6 +13624,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idx: 4
   player: {fileID: 293110346}
+  isSelected: 0
+  initialX: 0
+  initialY: 0
+  card:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
 --- !u!1 &1188095649
 GameObject:
   m_ObjectHideFlags: 0
@@ -33651,6 +33708,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idx: 2
   player: {fileID: 293110346}
+  isSelected: 0
+  initialX: 0
+  initialY: 0
+  card:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
 --- !u!4 &1643956466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3405034412937924662, guid: 8a0a17c3f919238429bc36930e4a09b6, type: 3}
@@ -35552,6 +35617,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idx: 1
   player: {fileID: 293110346}
+  isSelected: 0
+  initialX: 0
+  initialY: 0
+  card:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
 --- !u!1 &1862759413
 GameObject:
   m_ObjectHideFlags: 0
@@ -36125,6 +36198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983094154}
+  - component: {fileID: 1983094155}
   m_Layer: 5
   m_Name: Cards
   m_TagString: Untagged
@@ -36158,6 +36232,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1983094155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983094153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f2d78e35072401fba4e6aa8e167f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuurentPlayer: {fileID: 293110346}
 --- !u!1 &1996853680
 GameObject:
   m_ObjectHideFlags: 0
