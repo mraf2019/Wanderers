@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     public int maxHealth = 100;
-    public List<string> cards = new List<string>();
+    public List<CardInfo> cards = new List<CardInfo>();
     int currentHealth;
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
@@ -48,10 +48,18 @@ public class Player : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth);
     }
 
-    public void CollectCards(string name)
+    public void CollectCards(CardInfo card)
     {
-        cards.Add(name);
+        cards.Add(card);
+    }
+
+    public void OnPointerClick()
+    {
+        // Notify the card manager (or other script) about the target selection
+        Debug.Log("click");
+        CardManager.Instance.OnTargetPlayerSelected(this);
     }
 }
