@@ -10,6 +10,7 @@ public class EnemyLoot : MonoBehaviour
     /// <param name="other">The other Collider2D involved in this collision.</param>
     public List<CardInfo> cards = new List<CardInfo>();
     private List<GameObject> cardObjects = new List<GameObject>();
+    public GameObject target;
 
     void Start()
     {
@@ -36,5 +37,7 @@ public class EnemyLoot : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        
+        target.SetActive(false);
     }
 }
