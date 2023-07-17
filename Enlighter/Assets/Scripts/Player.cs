@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         cards.Add(card);
     }
 
-    private void OnMouseDown()
+    public void OnPointerClick()
     {
         // Notify the card manager (or other script) about the target selection
         Debug.Log("click");

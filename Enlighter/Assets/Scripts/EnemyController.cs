@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class EnemyController : MonoBehaviour
 {
@@ -77,9 +78,8 @@ public class EnemyController : MonoBehaviour
         Debug.Log(currentHealth);
     }
 
-    private void OnMouseDown()
+    public void OnPointerClick()
     {
-        // Notify the card manager (or other script) about the target selection
         Debug.Log("click");
         CardManager.Instance.OnTargetEnemySelected(this);
     }
