@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Characters : MonoBehaviour
+public class CharacterScene : MonoBehaviour
 {
     public void PlayTutorial()
         {
@@ -14,3 +14,5 @@ public class Characters : MonoBehaviour
             SceneManager.LoadScene("Start Menu");
         }
 }
+
+
