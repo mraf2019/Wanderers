@@ -92,5 +92,6 @@ public class EnemyController : MonoBehaviour
     public void OnPointerClick()
     {
         CardManager.Instance.OnTargetEnemySelected(this);
+        SkillManager.Instance.OnTargetEnemySelected(this);
     }
 }

@@ -4401,6 +4401,8 @@ GameObject:
   - component: {fileID: 533425228}
   - component: {fileID: 533425230}
   - component: {fileID: 533425229}
+  - component: {fileID: 533425232}
+  - component: {fileID: 533425231}
   m_Layer: 5
   m_Name: CharacterSkill
   m_TagString: Untagged
@@ -4466,6 +4468,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533425227}
   m_CullTransparentMesh: 1
+--- !u!114 &533425231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533425227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 533425232}
+          m_TargetAssemblyTypeName: Skill, Assembly-CSharp
+          m_MethodName: OnPointerClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &533425232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533425227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e6cb35508c6e946b3628507c86aca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idx: 0
+  player: {fileID: 293110346}
+  isSelected: 0
+  initialX: 0
+  initialY: 0
+  skill:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
 --- !u!1 &534845913
 GameObject:
   m_ObjectHideFlags: 0
@@ -13052,6 +13105,7 @@ GameObject:
   - component: {fileID: 1108091195}
   - component: {fileID: 1108091197}
   - component: {fileID: 1108091196}
+  - component: {fileID: 1108091198}
   m_Layer: 5
   m_Name: Skill
   m_TagString: Untagged
@@ -13118,6 +13172,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108091194}
   m_CullTransparentMesh: 1
+--- !u!114 &1108091198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108091194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049ce3583191b974d8ba73dca57a20e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuurentPlayer: {fileID: 293110346}
 --- !u!1 &1109315505
 GameObject:
   m_ObjectHideFlags: 0
@@ -38112,6 +38179,18 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 148323164}
+    - target: {fileID: 7404335851372600302, guid: 2498520fe7949f540922f66f4dfd855f, type: 3}
+      propertyPath: skill.name
+      value: Ivy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404335851372600302, guid: 2498520fe7949f540922f66f4dfd855f, type: 3}
+      propertyPath: skill.attack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404335851372600302, guid: 2498520fe7949f540922f66f4dfd855f, type: 3}
+      propertyPath: skill.healthChange
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 7407026483689402042, guid: 2498520fe7949f540922f66f4dfd855f, type: 3}
       propertyPath: m_SortingOrder
       value: 6

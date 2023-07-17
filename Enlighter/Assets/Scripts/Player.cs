@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public int maxHealth = 100;
     public List<CardInfo> cards = new List<CardInfo>();
+    public SkillInfo skill;
     int currentHealth;
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
