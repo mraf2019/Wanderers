@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     public float roundTime;
     public float stopTime;
     public int maxHealth = 100;
+    public EnemyHealthBar healthBar;
 
     int currentHealth;
     Rigidbody2D rigidbody2d;
@@ -81,7 +82,7 @@ public class EnemyController : MonoBehaviour
             animator.SetTrigger("Hit");
         }
         Debug.Log(currentHealth);
-        EnemyHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
+        healthBar.Setvalue(currentHealth / (float)maxHealth);
         if (currentHealth == 0)
         {
             GameManager.Instance.PlayerDestroyed();
