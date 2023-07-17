@@ -38900,15 +38900,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3365489286311528576, guid: b5caccf7dd3b5433e8f28d7733140db2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5491430045539238040, guid: b5caccf7dd3b5433e8f28d7733140db2, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1878442052}
     - target: {fileID: 5491430045539238040, guid: b5caccf7dd3b5433e8f28d7733140db2, type: 3}
       propertyPath: cards.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5491430045539238040, guid: b5caccf7dd3b5433e8f28d7733140db2, type: 3}
       propertyPath: cards.Array.data[0].name
-      value: mutilated_dagger
+      value: emergency_medicine_kit
       objectReference: {fileID: 0}
     - target: {fileID: 5491430045539238040, guid: b5caccf7dd3b5433e8f28d7733140db2, type: 3}
       propertyPath: cards.Array.data[0].healthChange

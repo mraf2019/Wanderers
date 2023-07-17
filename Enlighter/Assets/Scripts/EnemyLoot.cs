@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
+    private const float scale = 0.4f;
+
     /// <summary>
     /// Sent when another object enters a trigger collider attached to this
     /// object (2D physics only).
@@ -12,10 +14,12 @@ public class Loot : MonoBehaviour
     public EnemyController enemy;
     private List<GameObject> cardObjects = new List<GameObject>();
     private Transform tf;
+    private bool update = true;
 
     void Start()
     {
         tf = GetComponent<Transform>();
+        tf.localScale = new Vector2(0, 0);
         for (int i = 1; i <= 5; i++)
         {
             GameObject cardObject = GameObject.Find("Canvas/GameUI/Cards/Card" + i.ToString());
@@ -25,12 +29,15 @@ public class Loot : MonoBehaviour
 
     void Update()
     {
-        tf.position = enemy.GetPos();
-        if (enemy.GetHealth() <= 0)
+        if (update)
         {
-            Debug.Log(enemy.GetHealth());
-            gameObject.SetActive(true);
-            Destroy(enemy.gameObject);
+            tf.position = enemy.GetPos();
+            if (enemy.GetHealth() <= 0)
+            {
+                tf.localScale = new Vector2(scale, scale);
+                Destroy(enemy.gameObject);
+                update = false;
+            }
         }
     }
 

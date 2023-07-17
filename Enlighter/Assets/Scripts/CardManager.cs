@@ -92,7 +92,6 @@ public class CardManager : MonoBehaviour
                 foreach (var cardObject in cardObjects)
                 {
                     Card card = cardObject.GetComponent<Card>();
-                    Debug.Log(card.name);
                     card.UpdateCard();
                 }
             }
