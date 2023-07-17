@@ -77,6 +77,10 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth);
+        if (currentHealth == 0)
+        {
+            EventHander.CallGetGameOverEvent();
+        }
     }
 
     public Vector2 GetPos()
