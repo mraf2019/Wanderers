@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLoot : MonoBehaviour
+public class Loot : MonoBehaviour
 {
     /// <summary>
     /// Sent when another object enters a trigger collider attached to this

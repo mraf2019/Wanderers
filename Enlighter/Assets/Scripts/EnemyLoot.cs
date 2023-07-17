@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Loot : MonoBehaviour
+public class EnemyLoot : MonoBehaviour
 {
     private const float scale = 0.4f;
 
