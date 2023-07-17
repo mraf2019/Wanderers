@@ -152,11 +152,6 @@ MonoBehaviour:
   roundTime: 0
   stopTime: 0
   maxHealth: 100
-  cards:
-  - name: emergency_medicine_kit
-    description: 
-    attack: 0
-    healthChange: 20
 --- !u!60 &-8109430799876555326
 PolygonCollider2D:
   m_ObjectHideFlags: 0

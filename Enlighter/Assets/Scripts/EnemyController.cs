@@ -80,7 +80,7 @@ public class EnemyController : MonoBehaviour
         EnemyHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
         if (currentHealth == 0)
         {
-            EventHander.CallGetGameOverEvent();
+            GameManager.Instance.PlayerDestroyed();
         }
     }
 
