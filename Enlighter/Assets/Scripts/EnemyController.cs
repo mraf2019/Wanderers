@@ -80,6 +80,7 @@ public class EnemyController : MonoBehaviour
     private void OnMouseDown()
     {
         // Notify the card manager (or other script) about the target selection
+        Debug.Log("click");
         CardManager.Instance.OnTargetEnemySelected(this);
     }
 }
