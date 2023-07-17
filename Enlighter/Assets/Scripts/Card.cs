@@ -55,6 +55,8 @@ public class Card : MonoBehaviour
     public void ResetCard()
     {
         tf.localScale = new Vector2(initialX, initialY);
+        Vector2 tmp = tf.position;
+        tf.position = tmp + new Vector2(0, -75);
         isSelected = false;
     }
 
@@ -77,6 +79,8 @@ public class Card : MonoBehaviour
             {
                 Vector2 scaleUp = new Vector2(initialX + 0.5f, initialY + 0.5f);
                 tf.localScale = scaleUp;
+                Vector2 tmp = tf.position;
+                tf.position = tmp + new Vector2(0, 75);
                 Debug.Log("selected");
             }
             else

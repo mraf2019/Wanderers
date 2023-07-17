@@ -80,7 +80,6 @@ public class EnemyController : MonoBehaviour
 
     public void OnPointerClick()
     {
-        Debug.Log("click");
         CardManager.Instance.OnTargetEnemySelected(this);
     }
 }

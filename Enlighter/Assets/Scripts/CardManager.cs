@@ -35,8 +35,8 @@ public class CardManager : MonoBehaviour
         // If another card is already selected, deselect it first
         if (selectedCard != null && selectedCard != card)
         {
+            selectedCard.ResetCard();
             selectedCard.isSelected = false;
-            selectedCard.GetComponent<SpriteRenderer>().color = Color.white;
         }
 
         // Set the new selected card
