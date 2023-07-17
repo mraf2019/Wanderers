@@ -77,6 +77,7 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth);
+        EnemyHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
         if (currentHealth == 0)
         {
             EventHander.CallGetGameOverEvent();
