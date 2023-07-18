@@ -3,7 +3,7 @@
 # Getting Started
 Unity Hub
 
-Unity 2022.3.0f1
+Unity 2022.3.4f1
 
 # Model and Engine
 ## story map
@@ -400,17 +400,59 @@ Retrieves detailed information about a specific card reached by the player.
   - `speed` (float): The speed of the player.
   - `visible` (boolean): Indicates whether the card is visible to other players.
 
-
 ## Third-Party SDKs
+
+None
 
 # View UI/UX
 
+Placeholder
+
 # Team Roster
-| Name                      | Design                   | Programming              |
-| ------------------------- | ------------------------ | ------------------------ |
-| Qi Lei                    | System Design            | Front end                |
-| Lan Wang                  | Role Design              | Back end                 |
-| Zefang Wei                | Background Design        | Front end                |
-| Yiwei Zhang               | Role Design              | Back end                 |
-| Siyi Qian                 | Card & Map Design        | Back end                 |
-| Wanying Ji                | Card & Map Design        | Front end                |
+
+| Name        | GitHub Username                             | Design            | Programming |
+| ----------- | ------------------------------------------- | ----------------- | ----------- |
+| Qi Lei      | [LeiQi7](https://github.com/LeiQi7)         | System Design     | Front end   |
+| Lan Wang    | [yexiaosu](https://github.com/yexiaosu)     | Role Design       | Back end    |
+| Zefang Wei  | [mraf2019](https://github.com/mraf2019)     | Background Design | Front end   |
+| Yiwei Zhang | [Sunnyvale7](https://github.com/Sunnyvale7) | Role Design       | Back end    |
+| Siyi Qian   | [Kikaze-K](https://github.com/Kikaze-K)     | Card & Map Design | Back end    |
+| Wanying Ji  |                                             | Card & Map Design | Front end   |
+
+# Contributions
+
+Here lists contributors and their work till 7/18:
+
+<a href="https://github.com/mraf2019/Wanderers/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mraf2019/Wanderers" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+## Overview
+
+https://github.com/mraf2019/Wanderers/graphs/contributors
+
+## Lan Wang (yexiaosu)
+
+contributions placeholder
+
+## Siyi Qian (Kikaze-K)
+
+contributions placeholder
+
+## Qi Lei (LeiQi7)
+
+contributions placeholder
+
+## Yiwei Zhang (Sunnyvale7)
+
+contributions placeholder
+
+## Zefang Wei (mraf2019)
+
+contributions placeholder
+
+## Wanying Ji ()
+
+contributions placeholder
