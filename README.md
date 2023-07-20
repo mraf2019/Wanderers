@@ -1,4 +1,5 @@
-![image](titlepage.png)# Enlighter
+![image](titlepage.png)
+# Enlighter
 
 # Getting Started
 Unity Hub
@@ -414,19 +415,20 @@ Host a game or join a game.
 ![image](View_UIUX/3.png)
 ![image](View_UIUX/4.png)
 ### Tutorial
+According to the usability test, we add some operation instructions to guide beginners so that they will not be confused.
 First choose your character.
 ![image](View_UIUX/5.png)
 Then move around by dragging the joystick.
 ![image](View_UIUX/7.png)
 Resourses on the map can be picked up, which usually represents a card.
 ![image](View_UIUX/8.png)
-Attack the enemy using cards.
+Attack the enemy using cards and skills.
 ![image](View_UIUX/9.png)
 Kill the enemy and pick up loot.
 ![image](View_UIUX/10.png)
-Attacked by enemy.
+Attacked by enemy. According to the usability test, both player's and the enemy's character status are clearly presented as health bar(on the top of the screen and above the enemy's head).
 ![image](View_UIUX/11.png)
-If there is any questions regarding the interface, press menu button and look for help.
+There have been complaints that character skill is hard to notice. For cases like this, users can press menu button and look for illustration on the interface. Players are also able to exit the game whenever they want through this menu.
 ![image](View_UIUX/12.png)
 ![image](View_UIUX/13.png)
 Move to another region and kill the last enemy.
