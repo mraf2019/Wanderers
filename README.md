@@ -439,7 +439,7 @@ contributions placeholder
 
 ## Siyi Qian (Kikaze-K)
 
-contributions placeholder
+enemy model and walking animation, minimap, camera motion update  (y-axis depth of field), result page, collect loot, step-by-step tutorial guidance
 
 ## Qi Lei (LeiQi7)
 
