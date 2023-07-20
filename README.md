@@ -1,4 +1,4 @@
-![image](https://github.com/mraf2019/Wanderers/assets/45257769/606da2b8-8315-49c6-92f6-6775ce7ee220)# Enlighter
+![image](titlepage.png)# Enlighter
 
 # Getting Started
 Unity Hub
