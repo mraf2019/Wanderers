@@ -7,10 +7,10 @@ Unity 2022.3.4f1
 
 # Model and Engine
 ## story map
-![image](https://github.com/mraf2019/Enlighter/assets/45257769/86444e59-0e0f-4aaf-b901-7742c1bc97f1)
+![image](story_map.png)
 
 ## engine architecture
-![image](https://github.com/mraf2019/Enlighter/assets/45257769/e64e245b-5632-48b0-811b-fd4661029f02)
+![image](engine_architecture.png)
 
 
 # APIs and Controller
