@@ -473,7 +473,7 @@ enemy model and walking animation, minimap, camera motion update  (y-axis depth 
 
 ## Qi Lei (LeiQi7)
 
-contributions placeholder
+Overall map, collision of subjects and characters, skill attack, game status controller, pages linking, database. 
 
 ## Yiwei Zhang (Sunnyvale7)
 
