@@ -1,4 +1,4 @@
-# Enlighter
+![image](https://github.com/mraf2019/Wanderers/assets/45257769/606da2b8-8315-49c6-92f6-6775ce7ee220)# Enlighter
 
 # Getting Started
 Unity Hub
@@ -406,7 +406,35 @@ None
 
 # View UI/UX
 
-Placeholder
+### Main Menu
+Play button is the entry for players who want to start a new game. Tutorial button is designed for beginners as guidance.
+![image](View_UIUX/1.png)
+Host a game or join a game.
+![image](View_UIUX/2.png)
+![image](View_UIUX/3.png)
+![image](View_UIUX/4.png)
+### Tutorial
+First choose your character.
+![image](View_UIUX/5.png)
+Then move around by dragging the joystick.
+![image](View_UIUX/7.png)
+Resourses on the map can be picked up, which usually represents a card.
+![image](View_UIUX/8.png)
+Attack the enemy using cards.
+![image](View_UIUX/9.png)
+Kill the enemy and pick up loot.
+![image](View_UIUX/10.png)
+Attacked by enemy.
+![image](View_UIUX/11.png)
+If there is any questions regarding the interface, press menu button and look for help.
+![image](View_UIUX/12.png)
+![image](View_UIUX/13.png)
+Move to another region and kill the last enemy.
+![image](View_UIUX/14.png)
+Win the game and reach to the result page of the game.
+![image](View_UIUX/16.png)
+
+
 
 # Team Roster
 
