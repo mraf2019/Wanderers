@@ -465,7 +465,7 @@ https://github.com/mraf2019/Wanderers/graphs/contributors
 
 ## Lan Wang (yexiaosu)
 
-contributions placeholder
+player model and walking animation, start page, collect enemy loot, collect and display cards, use cards to attack/heal, in-game settings menu and help page, art of UI elements
 
 ## Siyi Qian (Kikaze-K)
 
