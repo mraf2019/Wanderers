@@ -477,11 +477,11 @@ Overall map, collision of subjects and characters, skill attack, game status con
 
 ## Yiwei Zhang (Sunnyvale7)
 
-contributions placeholder
+Health bar UI design (both main character and enemies), character choosing page design, HP function, pages linking, bug fixes.
 
 ## Zefang Wei (mraf2019)
 
-contributions placeholder
+Overall UI design of the game page, health bar UI design (main character)
 
 ## Wanying Ji ()
 
