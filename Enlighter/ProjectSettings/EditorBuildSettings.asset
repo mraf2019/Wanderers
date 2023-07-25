@@ -18,15 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Result.unity
     guid: 7048aa361b765ea4682064bbab9a4ac0
   - enabled: 1
-<<<<<<< Updated upstream
     path: Assets/Scenes/Game.unity
     guid: 14df5c84f78b54ef4b709e84c170539e
-=======
-    path: Assets/Scenes/Character MVP.unity
-    guid: 50e2d77e962d1a9488b730103461c3b5
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: e5b1833c8d5ddbf4fa0f0977f8d598a5
->>>>>>> Stashed changes
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: c3511f7e391704b9786bb4e22f64cdba, type: 2}
