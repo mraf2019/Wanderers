@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        playerPrefab.GetComponent<onlinePlayer>().joystick = joystick;
+        playerPrefab.GetComponent<OnlinePlayer>().joystick = joystick;
         SpawnPlayer();
     }
 

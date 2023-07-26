@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class onlinePlayer : Photon.MonoBehaviour
+public class OnlinePlayer : Photon.MonoBehaviour
 {
     public PhotonView photonView;
     public Rigidbody2D rb;
@@ -59,5 +59,16 @@ public class onlinePlayer : Photon.MonoBehaviour
 
         animator.SetFloat("Move X", rb.velocity.x);
         animator.SetFloat("Move Y", rb.velocity.y);
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        if (amount < 0)
+        {
+            animator.SetTrigger("Hit");
+        }
+        Debug.Log(currentHealth);
+        UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
     }
 }

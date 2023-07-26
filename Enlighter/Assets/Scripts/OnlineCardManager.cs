@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System;
 
-public class CardManager : MonoBehaviour
+public class OnlineCardManager : MonoBehaviour
 {
-    public static CardManager Instance; // Singleton instance
+    public static OnlineCardManager Instance; // Singleton instance
     public Player cuurentPlayer;
 
-    private Card selectedCard;
-    private Player selectedPlayer;
+    private OnlineCard selectedCard;
+    private OnlinePlayer selectedPlayer;
     private EnemyController selectedEnemy;
     private List<GameObject> cardObjects = new List<GameObject>();
 
@@ -31,7 +30,7 @@ public class CardManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void OnCardSelected(Card card)
+    public void OnCardSelected(OnlineCard card)
     {
         // If another card is already selected, deselect it first
         if (selectedCard != null && selectedCard != card)
@@ -44,7 +43,7 @@ public class CardManager : MonoBehaviour
         selectedCard = card;
     }
 
-    public void OnTargetPlayerSelected(Player player)
+    public void OnTargetPlayerSelected(OnlinePlayer player)
     {
         // If a card is selected and a target is clicked, use the card's effect on the target
         if (selectedCard != null)
@@ -62,7 +61,7 @@ public class CardManager : MonoBehaviour
                 cuurentPlayer.cards.RemoveAt(selectedCard.idx);
                 foreach (var cardObject in cardObjects)
                 {
-                    Card card = cardObject.GetComponent<Card>();
+                    OnlineCard card = cardObject.GetComponent<OnlineCard>();
                     card.UpdateCard();
                 }
             }
@@ -102,10 +101,5 @@ public class CardManager : MonoBehaviour
             selectedCard = null;
             selectedEnemy = null;
         }
-    }
-
-    public static implicit operator CardManager(OnlineCardManager v)
-    {
-        throw new NotImplementedException();
     }
 }
