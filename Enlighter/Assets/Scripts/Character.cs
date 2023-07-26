@@ -32,5 +32,6 @@ public class Character : MonoBehaviour
         }
         else
             ResetCharacter();
+        CharacterManager.Instance.OnCharacterSelected(this);
     }
 }
