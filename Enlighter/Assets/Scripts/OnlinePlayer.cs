@@ -13,7 +13,12 @@ public class onlinePlayer : Photon.MonoBehaviour
     public int maxHealth = 100;
     public Joystick joystick;
     public float speed = 4;
+
+    public List<CardInfo> cards = new List<CardInfo>();
+    public SkillInfo skill;
+
     private Vector2 lookDirection = new Vector2(1, 0);
+    private int currentHealth;
 
     private void Awake()
     {

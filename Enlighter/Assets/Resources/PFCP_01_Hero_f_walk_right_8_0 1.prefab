@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7407026483689402042}
   - component: {fileID: 593319136883593491}
   - component: {fileID: 634425803509087944}
-  - component: {fileID: 7404335851372600302}
   - component: {fileID: 6884582954434285892}
   - component: {fileID: 9091655841620339595}
   - component: {fileID: 5876019487068570557}
@@ -141,27 +140,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7404335851372600302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2201569341116609583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0551918944e842158b04c77e5f79918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
-  speed: 3
-  maxHealth: 100
-  cards: []
-  skill:
-    name: Ivy
-    description: 
-    attack: 1
-    healthChange: -60
 --- !u!114 &6884582954434285892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +157,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7404335851372600302}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Player, Assembly-CSharp
           m_MethodName: OnPointerClick
           m_Mode: 1
