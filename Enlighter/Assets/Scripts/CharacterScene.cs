@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 public class CharacterScene : MonoBehaviour
 {
     public void PlayTutorial()
-        {
-            SceneManager.LoadScene("Tutorial");
-        }
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
     public void Exit()
-        {
-            SceneManager.LoadScene("Start Menu");
-        }
+    {
+        SceneManager.LoadScene("Start Menu");
+    }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
 }
 
 
