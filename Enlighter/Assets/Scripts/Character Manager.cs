@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -25,5 +26,11 @@ public class CharacterManager : MonoBehaviour
         }
 
         selectedCharacter = character;
+    }
+
+    public void OnPlayButtonClick()
+    {
+        PlayerPrefs.SetInt("SelectedCharacterIndex", selectedCharacter.characterId);
+        SceneManager.LoadScene("Game");
     }
 }

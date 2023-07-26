@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public string name = "";
+    public int characterId;
     public Transform tf;
     public float initialX;
     public float initialY;

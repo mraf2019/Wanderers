@@ -13,10 +13,6 @@ public class CharacterScene : MonoBehaviour
     {
         SceneManager.LoadScene("Start Menu");
     }
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
 }
 
 
