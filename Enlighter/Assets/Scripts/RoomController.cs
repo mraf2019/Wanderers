@@ -53,7 +53,7 @@ public class RoomController : MonoBehaviour
     }
 
     public void StartGame()
-    {   Debug.Log("lovedive");
+    {
         PhotonNetwork.LoadLevel("Game");
     }
 }
