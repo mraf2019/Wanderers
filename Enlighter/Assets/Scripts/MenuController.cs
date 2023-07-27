@@ -29,6 +29,7 @@ public class MenuController : MonoBehaviour
     private void Awake()
     {
         PhotonNetwork.ConnectUsingSettings(version);
+        PhotonNetwork.automaticallySyncScene = true;
     }
 
     private void OnConnectedToMaster()
@@ -91,6 +92,6 @@ public class MenuController : MonoBehaviour
 
     private void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Game");
+        PhotonNetwork.LoadLevel("Room");
     }
 }

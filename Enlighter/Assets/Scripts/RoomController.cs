@@ -34,6 +34,10 @@ public class RoomController : MonoBehaviour
             {
                 startButton.SetActive(true);
             }
+            foreach (Transform child in playerListContent)
+            {
+                Destroy(child.gameObject);
+            }
             for (int i = 0; i < players.Length; i++)
             {
                 Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
@@ -50,6 +54,6 @@ public class RoomController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        PhotonNetwork.LoadLevel("Game");
     }
 }
