@@ -2503,7 +2503,7 @@ MonoBehaviour:
   joinGameInput: {fileID: 957201703}
   startButton: {fileID: 222103638}
   createGameButton: {fileID: 16857157}
-  joinGameButton: {fileID: 0}
+  joinGameButton: {fileID: 2019920345}
 --- !u!4 &992525206
 Transform:
   m_ObjectHideFlags: 0

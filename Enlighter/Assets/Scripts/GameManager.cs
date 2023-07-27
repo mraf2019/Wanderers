@@ -1,8 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject playerPrefab;
+    public GameObject gameCanvas;
+    public GameObject sceneCamera;
+    public Joystick joystick;
+
     public int playersLeft;
 
     // Other variables and methods
@@ -22,7 +28,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    
+    private void Start()
+    {
+        playerPrefab.GetComponent<OnlinePlayer>().joystick = joystick;
+        SpawnPlayer();
+    }
+
     public void PlayerDestroyed()
     {
         playersLeft--;
@@ -44,5 +55,15 @@ public class GameManager : MonoBehaviour
     {
         // Reload the current scene or load a specific scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void SpawnPlayer()
+    {
+        float randomX = Random.Range(-30f, 30f);
+        float randomY = Random.Range(-30f, 30f);
+        PhotonNetwork.Instantiate(playerPrefab.name,
+            new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
+            Quaternion.identity,
+            0);
     }
 }
