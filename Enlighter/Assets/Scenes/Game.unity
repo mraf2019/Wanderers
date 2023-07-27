@@ -4540,8 +4540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2201569341116609583, guid: 5f9f43e42695f4dd1afdbbf32d564d2b, type: 3}
   gameCanvas: {fileID: 0}
-  sceneCamera: {fileID: 0}
-  joystick: {fileID: 148323164}
+  sceneCamera: {fileID: 519420028}
   playersLeft: 3
 --- !u!4 &540345088
 Transform:

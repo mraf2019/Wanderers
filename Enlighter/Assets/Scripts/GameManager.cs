@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject gameCanvas;
     public GameObject sceneCamera;
-    public Joystick joystick;
 
     public int playersLeft;
 
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        playerPrefab.GetComponent<OnlinePlayer>().joystick = joystick;
         SpawnPlayer();
     }
 
