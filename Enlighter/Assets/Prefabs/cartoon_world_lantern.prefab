@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5791391923494378233}
   - component: {fileID: 5710470035076679987}
-  - component: {fileID: 8327443194305872482}
+  - component: {fileID: 5059551591372352142}
   m_Layer: 0
   m_Name: cartoon_world_lantern
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5710470035076679987
 SpriteRenderer:
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8327443194305872482
+--- !u!60 &5059551591372352142
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

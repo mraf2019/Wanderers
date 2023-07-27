@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4779770521923726799}
   - component: {fileID: 934226241362050434}
-  - component: {fileID: 217741628073817504}
+  - component: {fileID: -4118698128282308453}
   m_Layer: 0
   m_Name: cartoon_world_house_5
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &934226241362050434
 SpriteRenderer:
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &217741628073817504
+--- !u!60 &-4118698128282308453
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
