@@ -31,6 +31,6 @@ public class CharacterManager : MonoBehaviour
     public void OnPlayButtonClick()
     {
         PlayerPrefs.SetInt("SelectedCharacterIndex", selectedCharacter.characterId);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("UsernameAndRoom");
     }
 }

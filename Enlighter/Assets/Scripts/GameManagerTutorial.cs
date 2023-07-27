@@ -2,19 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerTutorial : MonoBehaviour
 {
-    public GameObject playerPrefab;
-    public GameObject gameCanvas;
-    public GameObject sceneCamera;
-
     public int playersLeft;
 
     // Other variables and methods
 
     // Implement the Singleton pattern to ensure only one instance of the GameManager exists
-    private static GameManager instance;
-    public static GameManager Instance
+    private static GameManagerTutorial instance;
+    public static GameManagerTutorial Instance
     {
         get { return instance; }
     }
@@ -27,11 +23,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Start()
-    {
-        SpawnPlayer();
-    }
-
+ 
     public void PlayerDestroyed()
     {
         playersLeft--;
@@ -55,13 +47,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void SpawnPlayer()
-    {
-        float randomX = Random.Range(-30f, 30f);
-        float randomY = Random.Range(-30f, 30f);
-        PhotonNetwork.Instantiate(playerPrefab.name,
-            new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
-            Quaternion.identity,
-            0);
-    }
 }

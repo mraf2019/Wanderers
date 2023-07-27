@@ -9,4 +9,8 @@ public class GameMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Start Menu");
     }
+    public void EnterCharacter()
+    {
+        SceneManager.LoadScene("Character MVP");
+    }
 }

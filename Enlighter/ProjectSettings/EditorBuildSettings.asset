@@ -20,5 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 14df5c84f78b54ef4b709e84c170539e
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 217d05f83cafe486586c6eca3378260b
+  - enabled: 1
+    path: Assets/Scenes/Character MVP.unity
+    guid: a5eaebd045bb24d55b4e696291598708
+  - enabled: 1
+    path: Assets/Scenes/UsernameAndRoom.unity
+    guid: f49059fdc269597409d23bf131725870
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: c3511f7e391704b9786bb4e22f64cdba, type: 2}

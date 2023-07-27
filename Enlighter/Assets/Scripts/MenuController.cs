@@ -15,9 +15,21 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject createGameButton;
     [SerializeField] private GameObject joinGameButton;
 
+    private string msg;
+
+    private void Update()
+    {
+        if (msg!= PhotonNetwork.connectionStateDetailed.ToString())
+        {
+            msg = PhotonNetwork.connectionStateDetailed.ToString();
+            Debug.Log(msg);
+        }
+    }
+
     private void Awake()
     {
         PhotonNetwork.ConnectUsingSettings(version);
+        PhotonNetwork.automaticallySyncScene = true;
     }
 
     private void OnConnectedToMaster()
@@ -70,6 +82,7 @@ public class MenuController : MonoBehaviour
     public void CreateGame()
     {
         PhotonNetwork.CreateRoom(createGameInput.text, new RoomOptions() { maxPlayers = 5 }, null);
+        
     }
 
     public void JoinGame()
@@ -79,6 +92,6 @@ public class MenuController : MonoBehaviour
 
     private void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Game");
+        PhotonNetwork.LoadLevel("Room");
     }
 }

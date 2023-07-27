@@ -11,7 +11,6 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public GameObject playerCamera;
 
     public int maxHealth = 100;
-    public Joystick joystick;
     public float speed = 4;
 
     public List<CardInfo> cards = new List<CardInfo>();
@@ -43,9 +42,11 @@ public class OnlinePlayer : Photon.MonoBehaviour
 
     private void Move()
     {
-        if (joystick.joystickVec.y != 0)
+        Vector2 joystickVec = GameObject.FindGameObjectsWithTag("Joystick")[0].GetComponent<Joystick>().joystickVec;
+        Debug.Log(joystickVec);
+        if (joystickVec.y != 0)
         {
-            rb.velocity = new Vector2(joystick.joystickVec.x * speed, joystick.joystickVec.y * speed);
+            rb.velocity = new Vector2(joystickVec.x * speed, joystickVec.y * speed);
             lookDirection.Set(rb.velocity.x, rb.velocity.y);
             lookDirection.Normalize();
         }

@@ -4540,8 +4540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2201569341116609583, guid: 5f9f43e42695f4dd1afdbbf32d564d2b, type: 3}
   gameCanvas: {fileID: 0}
-  sceneCamera: {fileID: 0}
-  joystick: {fileID: 148323164}
+  sceneCamera: {fileID: 519420028}
   playersLeft: 3
 --- !u!4 &540345088
 Transform:
@@ -6106,10 +6105,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 71, y: 20}
-      - {x: -22, y: 20}
+    - - {x: 70, y: 62}
+      - {x: -22, y: 62}
       - {x: -22, y: -25}
-      - {x: 71, y: -25}
+      - {x: 70, y: -25}
   m_UseDelaunayMesh: 0
 --- !u!4 &747469183
 Transform:
