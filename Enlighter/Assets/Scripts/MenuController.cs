@@ -15,6 +15,17 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject createGameButton;
     [SerializeField] private GameObject joinGameButton;
 
+    private string msg;
+
+    private void Update()
+    {
+        if (msg!= PhotonNetwork.connectionStateDetailed.ToString())
+        {
+            msg = PhotonNetwork.connectionStateDetailed.ToString();
+            Debug.Log(msg);
+        }
+    }
+
     private void Awake()
     {
         PhotonNetwork.ConnectUsingSettings(version);
@@ -70,6 +81,7 @@ public class MenuController : MonoBehaviour
     public void CreateGame()
     {
         PhotonNetwork.CreateRoom(createGameInput.text, new RoomOptions() { maxPlayers = 5 }, null);
+        
     }
 
     public void JoinGame()
