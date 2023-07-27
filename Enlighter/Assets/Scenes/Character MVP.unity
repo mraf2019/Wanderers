@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 248549934}
   - component: {fileID: 248549936}
   - component: {fileID: 248549937}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Raelia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 794, y: 114}
+  m_AnchoredPosition: {x: 827, y: 10}
   m_SizeDelta: {x: 540, y: 780}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &248549934
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 541006157}
   - component: {fileID: 541006159}
   - component: {fileID: 541006158}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 1267355157}
   - component: {fileID: 1267355156}
   - component: {fileID: 1267355158}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Ivy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -806, y: 114}
+  m_AnchoredPosition: {x: -857, y: 10}
   m_SizeDelta: {x: 540, y: 780}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267355154
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 1358701697}
   - component: {fileID: 1358701699}
   - component: {fileID: 1358701700}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Raine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 114}
+  m_AnchoredPosition: {x: 0, y: 72}
   m_SizeDelta: {x: 640, y: 780}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358701697
@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 1914341556}
   - component: {fileID: 1914341558}
   - component: {fileID: 1914341557}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
