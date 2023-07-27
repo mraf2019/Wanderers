@@ -2,18 +2,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[System.Serializable]
-public struct SkillInfo
-{
-    [SerializeField] public string name;
-    [SerializeField] public string description;
-    [SerializeField] public bool attack;
-    [SerializeField] public int healthChange;
-}
+//[System.Serializable]
+//public struct SkillInfo
+//{
+//    [SerializeField] public string name;
+//    [SerializeField] public string description;
+//    [SerializeField] public bool attack;
+//    [SerializeField] public int healthChange;
+//}
 
 public class Skill : MonoBehaviour
 {
-    public int idx;
+    //public int idx;
     public Player player;
     public bool isSelected = false;
     public float initialX;
@@ -63,7 +63,7 @@ public class Skill : MonoBehaviour
             }
 
             // Notify the card manager (or other script) about the card selection
-            SkillManager.Instance.OnSkillSelected(this);
+            //SkillManager.Instance.OnSkillSelected(this);
         }
     }
 }

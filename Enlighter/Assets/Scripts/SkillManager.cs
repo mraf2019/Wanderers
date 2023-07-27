@@ -1,21 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
+
+[System.Serializable]
+public struct SkillInfo
+{
+    [SerializeField] public string name;
+    [SerializeField] public string description;
+    [SerializeField] public bool attack;
+    [SerializeField] public int healthChange;
+}
 
 public class SkillManager : MonoBehaviour
 {
     public static SkillManager Instance; // Singleton instance
-    public Player cuurentPlayer;
+    //public Player cuurentPlayer;
+    public float coldTime = 5.0f;
 
-    private Skill selectedSkill;
+    //private SkillInfo selectedSkill;
     private Player selectedPlayer;
     private EnemyController selectedEnemy;
     private List<GameObject> skillObjects = new List<GameObject>();
+    private float timer = 0;
+    private Image filledImage;
+    private bool ifStartTimer = false;
+
+    public Player player;
+    public bool isSelected = false;
+    public float initialX;
+    public float initialY;
+    private SkillInfo skill;
+    private Image img;
+    private Transform tf;
 
     void Start()
     {
-        GameObject skillObject = GameObject.Find("Canvas/CharacterSkill");
-        skillObjects.Add(skillObject);
+        //GameObject skillObject = GameObject.Find("Canvas/CharacterSkill");
+        //skillObjects.Add(skillObject);
+
+        //fpr filled image
+        filledImage = transform.Find("CharacterSkillCold").GetComponent<Image>();
+        //for skill image
+        isSelected = false;
+        img = transform.Find("CharacterSkill").GetComponent<Image>();
+        tf = transform.Find("CharacterSkill").GetComponent<Transform>();
+        skill = player.skill;
+        Sprite skillImg = Resources.Load<Sprite>("Skills/" + skill.name);
+        img.sprite = skillImg;
+        ifStartTimer = false;
+        initialX = tf.localScale.x;
+        initialY = tf.localScale.y;
     }
 
     private void Awake()
@@ -27,31 +63,30 @@ public class SkillManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void OnSkillSelected(Skill skill)
-    {
-        // Set the new selected skill
-        selectedSkill = skill;
-    }
+    //public void OnSkillSelected(SkillInfo skill)
+    //{
+    //    // Set the new selected skill
+    //    selectedSkill = skill;
+    //}
 
     public void OnTargetPlayerSelected(Player player)
     {
         // If a card is selected and a target is clicked, use the skill's effect on the target
-        if (selectedSkill != null)
+        if (isSelected)
         {
-            if (!selectedSkill.skill.attack)
+            if (!skill.attack)
             {
                 // Implement your skill's effect logic here
                 // For example: selectedSkill.UseEffect(target);
                 selectedPlayer = player;
-                selectedPlayer.ChangeHealth(selectedSkill.skill.healthChange);
+                selectedPlayer.ChangeHealth(skill.healthChange);
 
                 // Reset the card's selection state after using the skill
-                selectedSkill.isSelected = false;
+                isSelected = false;
             }
 
             // Clear the selected card and target references
-            selectedSkill.ResetSkill();
-            selectedSkill = null;
+            ResetSkill();
             selectedPlayer = null;
         }
     }
@@ -59,21 +94,69 @@ public class SkillManager : MonoBehaviour
     public void OnTargetEnemySelected(EnemyController enemy)
     {
         // If a skill is selected and a target is clicked, use the skill's effect on the target
-        if (selectedSkill != null)
+        if (isSelected)
         {
-            if (selectedSkill.skill.attack)
+            if (skill.attack)
             {
                 // Implement your skill's effect logic here
                 // For example: selectedSkill.UseEffect(target);
                 selectedEnemy = enemy;
-                selectedEnemy.ChangeHealth(selectedSkill.skill.healthChange);
+                selectedEnemy.ChangeHealth(skill.healthChange);
                 Debug.Log("health changed");
             }
 
             // Clear the selected skill and target references
-            selectedSkill.ResetSkill();
-            selectedSkill = null;
+            ResetSkill();
+            //selectedSkill.name = null;
             selectedEnemy = null;
+
+            ifStartTimer = true;
+        }
+    }
+
+    //for skill
+    public void ResetSkill()
+    {
+        tf.localScale = new Vector2(initialX, initialY);
+        isSelected = false;
+    }
+
+    public void OnPointerClick()
+    {
+        if (!ifStartTimer)
+        {
+            // When the card is clicked, toggle its selection state
+            isSelected = !isSelected;
+
+            // Show visual feedback to indicate the selection
+            if (isSelected)
+            {
+                Vector2 scaleUp = new Vector2(initialX + 0.5f, initialY + 0.5f);
+                tf.localScale = scaleUp;
+                Debug.Log("skill selected");
+            }
+            else
+            {
+                ResetSkill();
+            }
+
+            //// Notify the card manager (or other script) about the card selection
+            //Instance.OnSkillSelected(skill);
+        }
+    }
+
+    private void Update()
+    {
+        if (ifStartTimer)
+        {
+            timer += Time.deltaTime;
+            filledImage.fillAmount = (coldTime - timer) / coldTime;
+            if (timer >= coldTime)
+            {
+                filledImage.fillAmount = 0;
+                timer = 0;
+                ifStartTimer = false;
+            }
         }
     }
 }
