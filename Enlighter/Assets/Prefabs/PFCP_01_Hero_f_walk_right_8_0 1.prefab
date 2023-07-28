@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 634425803509087944}
   - component: {fileID: 7404335851372600302}
   - component: {fileID: 6884582954434285892}
-  - component: {fileID: 9091655841620339595}
   - component: {fileID: 5876019487068570557}
   - component: {fileID: 3275215920104878779}
+  - component: {fileID: -4234324436145746154}
   m_Layer: 6
   m_Name: PFCP_01_Hero_f_walk_right_8_0 1
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   - {fileID: 5236854285187150717}
   - {fileID: 498631143235495176}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7407026483689402042
 SpriteRenderer:
@@ -191,51 +191,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!61 &9091655841620339595
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2201569341116609583}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.32}
-    newSize: {x: 0.64, y: 1.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 1.32}
-  m_EdgeRadius: 0
 --- !u!114 &5876019487068570557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,8 +235,83 @@ MonoBehaviour:
   animator: {fileID: 593319136883593491}
   playerCamera: {fileID: 5156142553402219570}
   maxHealth: 100
-  joystick: {fileID: 0}
   speed: 4
+  cards: []
+  skill:
+    name: 
+    description: 
+    attack: 0
+    healthChange: 0
+--- !u!60 &-4234324436145746154
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201569341116609583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 1.32}
+    newSize: {x: 0.64, y: 1.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.21, y: -0.14999999}
+      - {x: 0.17999999, y: 0.07}
+      - {x: 0.26999998, y: 0.19}
+      - {x: 0.29999998, y: 0.29999998}
+      - {x: 0.29999998, y: 0.48}
+      - {x: 0.21, y: 0.62}
+      - {x: 0.099999994, y: 0.64}
+      - {x: -0.13, y: 0.65}
+      - {x: -0.14, y: 0.65}
+      - {x: -0.21, y: 0.58}
+      - {x: -0.19999999, y: 0.52}
+      - {x: -0.28, y: 0.32999998}
+      - {x: -0.31, y: 0.26999998}
+      - {x: -0.31, y: 0.089999996}
+      - {x: -0.19999999, y: -0.089999996}
+      - {x: -0.12, y: -0.11}
+      - {x: -0.25, y: -0.5}
+      - {x: -0.14, y: -0.58}
+      - {x: -0.08, y: -0.57}
+      - {x: -0.06, y: -0.63}
+      - {x: 0, y: -0.65}
+      - {x: 0.13, y: -0.65}
+      - {x: 0.17999999, y: -0.57}
+      - {x: 0.14, y: -0.48}
+      - {x: 0.22, y: -0.28}
+  m_UseDelaunayMesh: 0
 --- !u!1 &4510430930428236615
 GameObject:
   m_ObjectHideFlags: 0

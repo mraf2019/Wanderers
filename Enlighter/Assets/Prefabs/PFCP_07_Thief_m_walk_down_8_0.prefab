@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8507497281592035468}
   - component: {fileID: 1730924759772826289}
   - component: {fileID: 5519147647736073599}
-  - component: {fileID: -8109430799876555326}
+  - component: {fileID: 1155374880966684613}
   m_Layer: 0
   m_Name: PFCP_07_Thief_m_walk_down_8_0
   m_TagString: Untagged
@@ -152,7 +152,8 @@ MonoBehaviour:
   roundTime: 0
   stopTime: 0
   maxHealth: 100
---- !u!60 &-8109430799876555326
+  healthBar: {fileID: 0}
+--- !u!60 &1155374880966684613
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
