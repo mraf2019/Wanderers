@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject sceneCamera;
 
     public int playersLeft;
+    public GameObject loot;
 
     // Other variables and methods
 
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SpawnPlayer();
+        StartCoroutine("RefreshResource");
     }
 
     public void PlayerDestroyed()
@@ -75,12 +78,26 @@ public class GameManager : MonoBehaviour
         int idx = Random.Range(0, positions.Length / 2);
         Debug.Log("position length: " + positions.Length/2);
         Debug.Log("random index: " + idx);
-        float randomX = positions[idx, 0];
-        float randomY = positions[idx, 1];
+        //float randomX = positions[idx, 0];
+        //float randomY = positions[idx, 1];
+        float randomX = 5f;
+        float randomY = 0f;
         PhotonNetwork.Instantiate(playerPrefab.name,
             new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
             Quaternion.identity,
             0);
         Debug.Log(new Vector2(randomX,randomY));
+    }
+
+    IEnumerator RefreshResource()
+    {
+        while (true)
+        {
+            if (PhotonNetwork.isMasterClient)
+            {
+                loot = PhotonNetwork.InstantiateSceneObject("loot", Vector3.zero, Quaternion.identity, 0, null);
+            }
+            yield return new WaitForSeconds(10);
+        }
     }
 }

@@ -72,4 +72,9 @@ public class OnlinePlayer : Photon.MonoBehaviour
         Debug.Log(currentHealth);
         UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
     }
+
+    public void CollectCards(CardInfo card)
+    {
+        cards.Add(card);
+    }
 }
