@@ -30,7 +30,7 @@ public class RoomController : MonoBehaviour
         while (true)
         {
             PhotonPlayer[] players = PhotonNetwork.playerList;
-            if (players.Length > 1 && PhotonNetwork.isMasterClient) // if there are other players and this is the host
+            if (players.Length >= 1 && PhotonNetwork.isMasterClient) // if there are other players and this is the host
             {
                 startButton.SetActive(true);
             }

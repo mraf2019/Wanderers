@@ -12,6 +12,19 @@ public class GameManager : MonoBehaviour
 
     // Other variables and methods
 
+    private float[,] positions =
+    {
+        {18,34 },
+        {32,-10 },
+        {7,-40 },
+        {-20,-33 },
+        {-66,-7 },
+        {-53,24 },
+        {37,-58 },
+        {-12,-75 },
+        {-70,-70 }
+    };
+
     // Implement the Singleton pattern to ensure only one instance of the GameManager exists
     private static GameManager instance;
     public static GameManager Instance
@@ -57,11 +70,17 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        float randomX = Random.Range(-30f, 30f);
-        float randomY = Random.Range(-30f, 30f);
+        //float randomX = Random.Range(-30f, 30f);
+        //float randomY = Random.Range(-30f, 30f);
+        int idx = Random.Range(0, positions.Length / 2);
+        Debug.Log("position length: " + positions.Length/2);
+        Debug.Log("random index: " + idx);
+        float randomX = positions[idx, 0];
+        float randomY = positions[idx, 1];
         PhotonNetwork.Instantiate(playerPrefab.name,
             new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
             Quaternion.identity,
             0);
+        Debug.Log(new Vector2(randomX,randomY));
     }
 }
