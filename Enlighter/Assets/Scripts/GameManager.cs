@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject sceneCamera;
 
     public int playersLeft;
-    public GameObject loot;
+    public GameObject[] loots = new GameObject[15];
 
     // Other variables and methods
 
@@ -18,13 +18,32 @@ public class GameManager : MonoBehaviour
     {
         {18,34 },
         {32,-10 },
-        {7,-40 },
+        {-30,10 },
         {-20,-33 },
         {-66,-7 },
         {-53,24 },
         {37,-58 },
         {-12,-75 },
-        {-70,-70 }
+        {-70,-75 }
+    };
+
+    private Vector3[] LootPos = new Vector3[15]
+    {
+        new Vector3(51,37,0),
+        new Vector3(19,34,0),
+        new Vector3(-13,50,0),
+        new Vector3(-46,34,0),
+        new Vector3(-58,53,0),
+        new Vector3(-46,-3,0),
+        new Vector3(-2,15,0),
+        new Vector3(19,-10,0),
+        new Vector3(51,-14,0),
+        new Vector3(41,-43,0),
+        new Vector3(55,-62,0),
+        new Vector3(-4,-33,0),
+        new Vector3(-15,-52,0),
+        new Vector3(-41,-39,0),
+        new Vector3(-55,-65,0)
     };
 
     // Implement the Singleton pattern to ensure only one instance of the GameManager exists
@@ -78,10 +97,8 @@ public class GameManager : MonoBehaviour
         int idx = Random.Range(0, positions.Length / 2);
         Debug.Log("position length: " + positions.Length/2);
         Debug.Log("random index: " + idx);
-        //float randomX = positions[idx, 0];
-        //float randomY = positions[idx, 1];
-        float randomX = 5f;
-        float randomY = 0f;
+        float randomX = positions[idx, 0];
+        float randomY = positions[idx, 1];
         PhotonNetwork.Instantiate(playerPrefab.name,
             new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
             Quaternion.identity,
@@ -95,9 +112,21 @@ public class GameManager : MonoBehaviour
         {
             if (PhotonNetwork.isMasterClient)
             {
-                loot = PhotonNetwork.InstantiateSceneObject("loot", Vector3.zero, Quaternion.identity, 0, null);
+                foreach (GameObject loot in loots)
+                {
+                    if (loot != null)
+                    {
+                        Destroy(loot.gameObject);
+                    }
+                }
+                Debug.Log("all loot destroyed");
+                for (int i = 0; i < LootPos.Length; i++)
+                {
+                    loots[i] = PhotonNetwork.InstantiateSceneObject("loot", LootPos[i], Quaternion.identity, 0, null);
+                }
+                Debug.Log("2 loots generated");
             }
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(15);
         }
     }
 }
