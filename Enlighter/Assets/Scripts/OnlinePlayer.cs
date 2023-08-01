@@ -27,6 +27,11 @@ public class OnlinePlayer : Photon.MonoBehaviour
             playerCamera.SetActive(true);
             PlayerNameText.text = PhotonNetwork.playerName;
         }
+        else
+        {
+            PlayerNameText.text = photonView.owner.name;
+            PlayerNameText.color = Color.cyan;
+        }
     }
     // Start is called before the first frame update
     private void Start()
