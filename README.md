@@ -440,14 +440,14 @@ Win the game and reach to the result page of the game.
 
 # Team Roster
 
-| Name        | GitHub Username                             | Design            | Programming |
-| ----------- | ------------------------------------------- | ----------------- | ----------- |
-| Qi Lei      | [LeiQi7](https://github.com/LeiQi7)         | System Design     | Front end   |
-| Lan Wang    | [yexiaosu](https://github.com/yexiaosu)     | Role Design       | Back end    |
-| Zefang Wei  | [mraf2019](https://github.com/mraf2019)     | Background Design | Front end   |
-| Yiwei Zhang | [Sunnyvale7](https://github.com/Sunnyvale7) | Role Design       | Back end    |
-| Siyi Qian   | [Kikaze-K](https://github.com/Kikaze-K)     | Card & Map Design | Back end    |
-| Wanying Ji  |                                             | Card & Map Design | Front end   |
+| Name        | GitHub Username                                | Design            | Programming |
+| ----------- | -------------------------------------------    | ----------------- | ----------- |
+| Qi Lei      | [LeiQi7](https://github.com/LeiQi7)            | System Design     | Front end   |
+| Lan Wang    | [yexiaosu](https://github.com/yexiaosu)        | Role Design       | Back end    |
+| Zefang Wei  | [mraf2019](https://github.com/mraf2019)        | Background Design | Front end   |
+| Yiwei Zhang | [Sunnyvale7](https://github.com/Sunnyvale7)    | Role Design       | Back end    |
+| Siyi Qian   | [Kikaze-K](https://github.com/Kikaze-K)        | Card & Map Design | Back end    |
+| Wanying Ji  | [whynotsignin](https://github.com/whynotsignin)| Card & Map Design | Front end   |
 
 # Contributions
 
@@ -483,6 +483,6 @@ Health bar UI design (both main character and enemies), character choosing page 
 
 Overall UI design of the game page, health bar UI design (main character)
 
-## Wanying Ji ()
+## Wanying Ji (whynotsignin)
 
-contributions placeholder
+card design
