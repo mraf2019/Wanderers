@@ -44,8 +44,12 @@ public class OnlinePlayer : Photon.MonoBehaviour
 
     private void Move()
     {
-        Vector2 joystickVec = GameObject.FindGameObjectsWithTag("Joystick")[0].GetComponent<Joystick>().joystickVec;
-        Debug.Log(joystickVec);
+        var joysticks = GameObject.FindGameObjectsWithTag("Joystick");
+        if (joysticks.Length <= 0)
+        {
+            return;
+        }
+        Vector2 joystickVec = joysticks[0].GetComponent<Joystick>().joystickVec;
         if (joystickVec.y != 0)
         {
             rb.velocity = new Vector2(joystickVec.x * speed, joystickVec.y * speed);
