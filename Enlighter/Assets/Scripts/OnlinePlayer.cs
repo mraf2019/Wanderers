@@ -9,6 +9,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public GameObject playerCamera;
+    public Text PlayerNameText;
 
     public int maxHealth = 100;
     public float speed = 4;
@@ -24,6 +25,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             playerCamera.SetActive(true);
+            PlayerNameText.text = PhotonNetwork.playerName;
         }
     }
     // Start is called before the first frame update
