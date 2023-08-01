@@ -393,6 +393,7 @@ MonoBehaviour:
   rb: {fileID: 634425803509087944}
   animator: {fileID: 593319136883593491}
   playerCamera: {fileID: 5156142553402219570}
+  PlayerNameText: {fileID: 4473379931360516026}
   maxHealth: 100
   speed: 4
   cards: []

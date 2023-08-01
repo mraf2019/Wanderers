@@ -9,7 +9,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public GameObject playerCamera;
-    public Text PlayerNameText;
+    public TMPro.TMP_Text PlayerNameText;
 
     public int maxHealth = 100;
     public float speed = 4;
