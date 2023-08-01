@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
             Quaternion.identity,
             0);
         Debug.Log(new Vector2(randomX,randomY));
+        sceneCamera.SetActive(true);
     }
 
     IEnumerator RefreshResource()

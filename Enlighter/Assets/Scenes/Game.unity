@@ -6965,7 +6965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.611696, y: -3.3641956, z: -10}
+  m_LocalPosition: {x: 17.581997, y: -20.198038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7691,7 +7691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2201569341116609583, guid: 5f9f43e42695f4dd1afdbbf32d564d2b, type: 3}
-  gameCanvas: {fileID: 0}
+  gameCanvas: {fileID: 1918437408}
   sceneCamera: {fileID: 519420028}
   playersLeft: 3
   loots:
@@ -48252,7 +48252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479326137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.721696, y: -7.2741957, z: -10}
+  m_LocalPosition: {x: 20.471996, y: -24.108038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

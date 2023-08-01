@@ -57,7 +57,7 @@ public class OnlineSkill : MonoBehaviour
             }
 
             // Notify the card manager (or other script) about the card selection
-            OnlineSkillManager.Instance.OnSkillSelected(this);
+            //OnlineSkillManager.Instance.OnSkillSelected(this);
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class OnlinePlayer : Photon.MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     {
         if (photonView.isMine)
         {
-            playerCamera.SetActive(true);
+            //playerCamera.SetActive(true);
             PlayerNameText.text = PhotonNetwork.playerName;
         }
         else
@@ -36,6 +37,10 @@ public class OnlinePlayer : Photon.MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        if (photonView.isMine)
+        {
+            playerCamera.SetActive(true);
+        }
     }
 
     // Update is called once per frame
