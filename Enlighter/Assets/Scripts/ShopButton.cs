@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class ShopButton : MonoBehaviour
 {
-    public int price;
     public OnlinePlayer currentPlayer;
-    public ShopCard card;
+    public ShopCard shopcard;
 
     public void OnPointerClick()
     {
-        if (currentPlayer.currency < price)
+        if (currentPlayer.currency < shopcard.card.price)
         {
             return;
         }
-        Debug.Log(-1 * price);
-        currentPlayer.ChangeCurrency(-1 * price);
-        currentPlayer.CollectCards(card.card);
-        card.UpdatePlayerCards();
-        card.ClearCard();
+        Debug.Log(-1 * shopcard.card.price);
+        currentPlayer.ChangeCurrency(-1 * shopcard.card.price);
+        currentPlayer.CollectCards(shopcard.card);
+        shopcard.UpdatePlayerCards();
+        shopcard.ClearCard();
     }
 }

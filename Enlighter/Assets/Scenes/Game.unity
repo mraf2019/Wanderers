@@ -7203,7 +7203,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -25522,7 +25522,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122812863}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1122812867
 Camera:
   m_ObjectHideFlags: 0
@@ -26680,18 +26680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155e049d1ea4a47839183a80fd3518ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   currentPlayer: {fileID: 0}
-  card:
-    id: 0
-    name: 
-    description: 
-    attack: 0
-    invincible: 0
-    healthChange: 0
-    speedChange: 0
-    money: 0
-    price: 0
+  shopcard: {fileID: 1544669949}
 --- !u!4 &1207369075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5313877120419022430, guid: d0023fb38b0bd6f448edf0bd6d204e8c, type: 3}
@@ -48863,18 +48853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155e049d1ea4a47839183a80fd3518ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   currentPlayer: {fileID: 0}
-  card:
-    id: 0
-    name: 
-    description: 
-    attack: 0
-    invincible: 0
-    healthChange: 0
-    speedChange: 0
-    money: 0
-    price: 0
+  shopcard: {fileID: 1317134295}
 --- !u!4 &1386800058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8750982408729424435, guid: 658a8a7289968d84696573f8b52b1c7a, type: 3}
@@ -49066,18 +49046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155e049d1ea4a47839183a80fd3518ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   currentPlayer: {fileID: 0}
-  card:
-    id: 0
-    name: 
-    description: 
-    attack: 0
-    invincible: 0
-    healthChange: 0
-    speedChange: 0
-    money: 0
-    price: 0
+  shopcard: {fileID: 1918622346}
 --- !u!1 &1407096868
 GameObject:
   m_ObjectHideFlags: 0

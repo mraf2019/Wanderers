@@ -14,7 +14,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public int maxHealth = 100;
     public float initialSpeed = 4;
     public float speed = 4;
-    public int currency = 1000;
+    public int currency;
 
     public List<CardInfo> cards = new List<CardInfo>();
     public SkillInfo mySkill;
@@ -69,6 +69,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
         }
         currentHealth = maxHealth;
         userName = photonView.photonView.owner.NickName;
+        currency = 1000;
     }
 
     // Update is called once per frame
@@ -154,6 +155,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
             return;
         Debug.Log(currency + amount);
         UIDecuts.instance.Setvalue(currency + amount);
+        currency += amount;
     }
 
     public void ChangeHealth(int amount, bool isRegion)

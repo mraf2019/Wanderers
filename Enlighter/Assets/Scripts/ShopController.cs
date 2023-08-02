@@ -28,7 +28,7 @@ public class ShopController : MonoBehaviour
             card.UpdateCard();
             ShopButton shopButton = card.transform.GetChild(0).gameObject.GetComponent<ShopButton>();
             shopButton.currentPlayer = cuurentPlayer;
-            shopButton.card = card;
+            shopButton.shopcard = card;
             shopButton.transform.GetChild(1).gameObject.GetComponent<TMPro.TMP_Text>().text = card.card.price.ToString();
             cardObjects.Add(cardObject);
         }
