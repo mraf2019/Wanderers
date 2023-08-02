@@ -53,7 +53,7 @@ public class OnlineCardManager : MonoBehaviour
                 // Implement your card's effect logic here
                 // For example: selectedCard.UseEffect(target);
                 selectedPlayer = player;
-                selectedPlayer.ChangeHealth(selectedCard.card.healthChange);
+                selectedPlayer.ChangeHealth(selectedCard.card.healthChange, false);
 
                 // Reset the card's selection state after using the card
                 selectedCard.isSelected = false;

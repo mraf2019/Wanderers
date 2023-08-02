@@ -276,7 +276,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &6884582954434285892
@@ -397,7 +397,7 @@ MonoBehaviour:
   rb: {fileID: 634425803509087944}
   animator: {fileID: 593319136883593491}
   playerCamera: {fileID: 5156142553402219570}
-  PlayerNameText: {fileID: 4473379931360516026}
+  PlayerNameText: {fileID: 0}
   maxHealth: 100
   speed: 4
   cards: []
