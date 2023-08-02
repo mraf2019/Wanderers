@@ -171,6 +171,8 @@ public class OnlinePlayer : Photon.MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
         if (currentHealth <= 0)
         {
+            PhotonNetwork.Instantiate("loot", transform.position, Quaternion.identity, 0);
+            gameObject.SetActive(false);
             GameManager.Instance.EndGame();
         }
     }
@@ -212,6 +214,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     {
         // Notify the card manager (or other script) about the target selection
         OnlineCardManager.Instance.OnTargetPlayerSelected(this, isSelf);
+        OnlineSkillManager.Instance.OnTargetPlayerSelected(this, isSelf);
     }
 
     [PunRPC]
