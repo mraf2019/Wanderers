@@ -1,278 +1,104 @@
 {
     "cards": [
-    {
-        "id": 1,
-        "name": "Sharp Stone",
-        "level": 1,
-        "ad": 5,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
+        {
+            "name": "SharpStone",
+            "id": 1,
+            "object":"enemy",
+            "health_change": 5,
+            "speed_change": 0,
+            "money": 30,
+            "invincible": 0
+        },
 
-    {
-        "id": 2,
-        "name": "Make a Deal!",
-        "level": 2,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 1,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": -50,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 3,
-        "name": "Coins",
-        "level": 1,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 10,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 4,
-        "name": "Sacrifice",
-        "level": 2,
-        "ad": 0,
-        "ap": 10,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 10,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-
-    {
-        "id": 5,
-        "name": "Hanging Deity",
-        "level": 2,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0.2,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0.2,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 6,
-        "name": "Broken Knife",
-        "level": 2,
-        "ad": 15,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-
-    {
-        "id": 7,
-        "name": "Ice",
-        "level": 2,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0.2,
-        "skill_cd_decrease": 0
-    },
-
-
-    {
-        "id": 8,
-        "name": "Gold",
-        "level": 2,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 30,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 9,
-        "name": "Pills",
-        "level": 2,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 20,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 10,
-        "name": "Lay on Hands",
-        "level": 3,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 50,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 11,
-        "name": "Ancient God Whispers",
-        "level": 3,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0.2
-    },
-
-    {
-        "id": 12,
-        "name": "Mobius Blade",
-        "level": 3,
-        "ad": 30,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 13,
-        "name": "Concentrated Ether",
-        "level": 3,
-        "ad": 30,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 14,
-        "name": "Ambiguous Spellbook",
-        "level": 3,
-        "ad": 0,
-        "ap": 50,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": -30,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-    {
-        "id": 15,
-        "name": "Holy Pressure",
-        "level": 3,
-        "ad": 0,
-        "ap": 30,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": 0,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    },
-
-
-    {
-        "id": 16,
-        "name": "Holy Water",
-        "level": 3,
-        "ad": 0,
-        "ap": 0,
-        "ad_increase": 0,
-        "ap_increase": 0,
-        "health_change": 0,
-        "invincible": 0,
-        "been_ad_increase": 0,
-        "been_ap_increase": -0.2,
-        "money": 0,
-        "enemy_speed_decrease": 0,
-        "skill_cd_decrease": 0
-    }]
+        {
+            "name": "BrokenDagger",
+            "id": 2,
+            "object":"enemy",
+            "health_change": 10,
+            "speed_change": 0,
+            "money": 25,
+            "invincible": 0
+        },
+        {
+            "name": "ExpiredEnergyDrink",
+            "id": 3,
+            "object":"enemy",
+            "health_change": 15,
+            "speed_change": 0,
+            "money": 20,
+            "invincible": 0
+        },
+        {
+            "name": "MobiusBlade",
+            "id": 4,
+            "object":"enemy",
+            "health_change": 30,
+            "speed_change": 0,
+            "money": 5,
+            "invincible": 0
+        },
+        {
+            "name": "JarofCompressedEther",
+            "id": 5,
+            "object":"enemy",
+            "health_change": 35,
+            "speed_change": 0,
+            "money": 0,
+            "invincible": 0
+        },
+        {
+            "name": "MagicBookwithBlurredCover",
+            "id": 6,
+            "object":"enemy",
+            "health_change": 15,
+            "speed_change": -0.1,
+            "money": 10,
+            "invincible": 0
+        },
+        {
+            "name": "PromisedLand",
+            "id": 7,
+            "object":"self",
+            "health_change": 0,
+            "speed_change": 0,
+            "money": -100,
+            "invincible": 1
+        },
+        {
+            "name": "GodsPunishment",
+            "id": 8,
+            "object":"enemy",
+            "health_change": 25,
+            "speed_change": -0.1,
+            "money": 0,
+            "invincible": 0
+        },
+        {
+            "name": "LayonHands",
+            "id": 9,
+            "object":"self",
+            "health_change": 25,
+            "speed_change": 0,
+            "money": 5,
+            "invincible": 0
+        },
+        {
+            "name": "HolyBlessing",
+            "id": 10,
+            "object":"self",
+            "health_change": 0,
+            "speed_change": 0.5,
+            "money": 0,
+            "invincible": 0
+        },
+        {
+            "name": "DreamofEnlightenment",
+            "id": 11,
+            "object":"self",
+            "health_change": 15,
+            "speed_change": 0,
+            "money": 20,
+            "invincible": 0
+        },
+    ]
 }
