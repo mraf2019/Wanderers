@@ -14,37 +14,9 @@ public class GameManager : MonoBehaviour
 
     // Other variables and methods
 
-    private float[,] positions =
-    {
-        {18,34 },
-        {32,-10 },
-        {-30,10 },
-        {-20,-33 },
-        {-66,-7 },
-        {-53,24 },
-        {37,-58 },
-        {-12,-75 },
-        {-70,-75 }
-    };
+    private float[,] positions = Constanat.positions;
 
-    private Vector3[] LootPos = new Vector3[15]
-    {
-        new Vector3(51,37,0),
-        new Vector3(19,34,0),
-        new Vector3(-13,50,0),
-        new Vector3(-46,34,0),
-        new Vector3(-58,53,0),
-        new Vector3(-46,-3,0),
-        new Vector3(-2,15,0),
-        new Vector3(19,-10,0),
-        new Vector3(51,-14,0),
-        new Vector3(41,-43,0),
-        new Vector3(55,-62,0),
-        new Vector3(-4,-33,0),
-        new Vector3(-15,-52,0),
-        new Vector3(-41,-39,0),
-        new Vector3(-55,-65,0)
-    };
+    private Vector3[] LootPos = Constanat.LootPos;
 
     // Implement the Singleton pattern to ensure only one instance of the GameManager exists
     private static GameManager instance;
@@ -129,7 +101,7 @@ public class GameManager : MonoBehaviour
                 }
                 Debug.Log("loots generated");
             }
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(Constanat.refreshInterval);
         }
     }
 }

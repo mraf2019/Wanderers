@@ -29,7 +29,7 @@ public class Shutdown : MonoBehaviour
 
     private IEnumerator StartWarning(int number, int timeMultiplier)
     {
-        yield return new WaitForSeconds(timeMultiplier * 10f);
+        yield return new WaitForSeconds(timeMultiplier * Constanat.refreshInterval);
         // number is 1-based, while idx of warnings and shutdownCovers is 0-based
         Debug.Log(string.Format("region {0} is going to be shut down", number));
         warnings[number - 1].SetActive(true);
@@ -38,7 +38,7 @@ public class Shutdown : MonoBehaviour
 
     private IEnumerator ShutdownRegion(int number)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         // number is 1-based, while idx of warnings and shutdownCovers is 0-based
         Debug.Log(string.Format("region {0} is shut down", number));
         shutdownCovers[number - 1].SetActive(true);
