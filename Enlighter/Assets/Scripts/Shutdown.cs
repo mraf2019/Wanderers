@@ -23,7 +23,7 @@ public class Shutdown : MonoBehaviour
         Debug.Log(shuffledOrder);
         for (int i = 1; i <= 9; i++)
         {
-            StartCoroutine(StartWarning(shuffledOrder[i], i));
+            StartCoroutine(StartWarning(shuffledOrder[i-1], i));
         }
     }
 

@@ -21,6 +21,10 @@ public class OnlinePlayer : Photon.MonoBehaviour
     private Vector2 lookDirection = new Vector2(1, 0);
     private int currentHealth;
 
+    public bool isInvincible = false;
+    private float invincibleTimer;
+    private float timeInvincible = 3.0f;
+
     private void Awake()
     {
         if (photonView.isMine)
@@ -50,6 +54,12 @@ public class OnlinePlayer : Photon.MonoBehaviour
         {
             Move();
         }
+        if (isInvincible)
+        {
+            invincibleTimer -= Time.deltaTime;
+            if (invincibleTimer < 0)
+                isInvincible = false;
+        }
     }
 
     private void Move()
@@ -78,14 +88,22 @@ public class OnlinePlayer : Photon.MonoBehaviour
         animator.SetFloat("Move Y", rb.velocity.y);
     }
 
-    public void ChangeHealth(int amount)
+    public void ChangeHealth(int amount, bool isRegion)
     {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         if (amount < 0)
         {
+            if (isInvincible)
+                return;
+            Debug.Log(amount);
             animator.SetTrigger("Hit");
+            if (isRegion)
+            {
+                isInvincible = true;
+                invincibleTimer = timeInvincible;
+            }
         }
-        Debug.Log(currentHealth);
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
         UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
     }
 
