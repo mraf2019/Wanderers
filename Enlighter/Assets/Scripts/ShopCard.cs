@@ -3,19 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public struct CardInfoRaw
-{
-    [SerializeField] public string name;
-    [SerializeField] public int id;
-    [SerializeField] public string is_attack;
-    [SerializeField] public int health_change;
-    [SerializeField] public float speed_change;
-    [SerializeField] public int money;
-    [SerializeField] public bool invincible;
-    [SerializeField] public int price;
-}
-
 public class ShopCard : MonoBehaviour
 {
     public int idx;
@@ -29,7 +16,7 @@ public class ShopCard : MonoBehaviour
         
     }
 
-    void UpdateCard()
+    public void UpdateCard()
     {
         if(idx < ShopController.Instance.count)
         {
