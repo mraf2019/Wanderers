@@ -93,4 +93,18 @@ public class OnlinePlayer : Photon.MonoBehaviour
     {
         cards.Add(card);
     }
+
+//    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+//    {
+//        if (stream.isWriting)
+//        {
+//            stream.SendNext(rb.velocity.x);
+//            stream.SendNext(rb.velocity.y);
+//        }
+//        else
+//        {
+//            rb.velocity.x = stream.ReceiveNext();
+
+//        }
+//    }
 }

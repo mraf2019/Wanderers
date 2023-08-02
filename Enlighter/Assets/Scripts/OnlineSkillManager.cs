@@ -20,14 +20,14 @@ public class OnlineSkillManager : MonoBehaviour
     public float coldTime = 5.0f;
 
     //private SkillInfo selectedSkill;
-    private Player selectedPlayer;
+    private OnlinePlayer selectedPlayer;
     private EnemyController selectedEnemy;
     private List<GameObject> skillObjects = new List<GameObject>();
     private float timer = 0;
     private Image filledImage;
     private bool ifStartTimer = false;
 
-    public Player player;
+    public OnlinePlayer player;
     public bool isSelected = false;
     public float initialX;
     public float initialY;
@@ -69,7 +69,7 @@ public class OnlineSkillManager : MonoBehaviour
     //    selectedSkill = skill;
     //}
 
-    public void OnTargetPlayerSelected(Player player)
+    public void OnTargetPlayerSelected(OnlinePlayer player)
     {
         // If a card is selected and a target is clicked, use the skill's effect on the target
         if (isSelected)

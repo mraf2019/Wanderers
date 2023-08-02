@@ -97,8 +97,10 @@ public class GameManager : MonoBehaviour
         int idx = Random.Range(0, positions.Length / 2);
         Debug.Log("position length: " + positions.Length/2);
         Debug.Log("random index: " + idx);
-        float randomX = positions[idx, 0];
-        float randomY = positions[idx, 1];
+        //float randomX = positions[idx, 0];
+        //float randomY = positions[idx, 1];
+        float randomX = 38;
+        float randomY = -84;
         PhotonNetwork.Instantiate(playerPrefab.name,
             new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
             Quaternion.identity,
@@ -125,7 +127,7 @@ public class GameManager : MonoBehaviour
                 {
                     loots[i] = PhotonNetwork.InstantiateSceneObject("loot", LootPos[i], Quaternion.identity, 0, null);
                 }
-                Debug.Log("2 loots generated");
+                Debug.Log("loots generated");
             }
             yield return new WaitForSeconds(15);
         }

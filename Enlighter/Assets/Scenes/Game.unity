@@ -7232,7 +7232,6 @@ GameObject:
   - component: {fileID: 533425230}
   - component: {fileID: 533425229}
   - component: {fileID: 533425231}
-  - component: {fileID: 533425232}
   m_Layer: 5
   m_Name: CharacterSkill
   m_TagString: Untagged
@@ -7351,28 +7350,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
---- !u!114 &533425232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533425227}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf81550d296444d480dde1e1e9ec999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idx: 0
-  playerPrefab: {fileID: 2201569341116609583, guid: 5f9f43e42695f4dd1afdbbf32d564d2b, type: 3}
-  isSelected: 0
-  initialX: 0
-  initialY: 0
-  skill:
-    name: 
-    description: 
-    attack: 0
-    healthChange: 0
 --- !u!1 &534845913
 GameObject:
   m_ObjectHideFlags: 0

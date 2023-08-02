@@ -402,10 +402,10 @@ MonoBehaviour:
   speed: 4
   cards: []
   skill:
-    name: 
+    name: Ivy
     description: 
-    attack: 0
-    healthChange: 0
+    attack: 1
+    healthChange: -20
 --- !u!114 &5631832092208033884
 MonoBehaviour:
   m_ObjectHideFlags: 0
