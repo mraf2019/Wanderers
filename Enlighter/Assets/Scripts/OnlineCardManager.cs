@@ -9,7 +9,6 @@ public class OnlineCardManager : MonoBehaviour
 
     private OnlineCard selectedCard;
     private OnlinePlayer selectedPlayer;
-    private EnemyController selectedEnemy;
     private List<GameObject> cardObjects = new List<GameObject>();
 
     void Start()
@@ -35,25 +34,31 @@ public class OnlineCardManager : MonoBehaviour
         // If another card is already selected, deselect it first
         if (selectedCard != null && selectedCard != card)
         {
-            selectedCard.ResetCard();
-            selectedCard.isSelected = false;
+            if (selectedCard.isSelected)
+            {
+                selectedCard.ResetCard();
+                selectedCard.isSelected = false;
+            }
         }
 
         // Set the new selected card
         selectedCard = card;
     }
 
-    public void OnTargetPlayerSelected(OnlinePlayer player)
+    public void OnTargetPlayerSelected(OnlinePlayer player, bool isSelf)
     {
         // If a card is selected and a target is clicked, use the card's effect on the target
         if (selectedCard != null)
         {
-            if (!selectedCard.card.attack)
+            Debug.Log(isSelf);
+            Debug.Log(selectedCard.card.healthChange);
+            if ((isSelf && !selectedCard.card.attack) || (!isSelf && selectedCard.card.attack))
             {
                 // Implement your card's effect logic here
                 // For example: selectedCard.UseEffect(target);
                 selectedPlayer = player;
-                selectedPlayer.ChangeHealth(selectedCard.card.healthChange, false);
+                PhotonView photonView = PhotonView.Get(selectedPlayer);
+                photonView.RPC("ChangeHealth", PhotonTargets.Others, selectedCard.card.healthChange, false);
 
                 // Reset the card's selection state after using the card
                 selectedCard.isSelected = false;
@@ -70,36 +75,6 @@ public class OnlineCardManager : MonoBehaviour
             selectedCard.ResetCard();
             selectedCard = null;
             selectedPlayer = null;
-        }
-    }
-
-    public void OnTargetEnemySelected(EnemyController enemy)
-    {
-        // If a card is selected and a target is clicked, use the card's effect on the target
-        if (selectedCard != null)
-        {
-            if (selectedCard.card.attack)
-            {
-                // Implement your card's effect logic here
-                // For example: selectedCard.UseEffect(target);
-                selectedEnemy = enemy;
-                selectedEnemy.ChangeHealth(selectedCard.card.healthChange);
-
-                // Reset the card's selection state after using the card
-                selectedCard.isSelected = false;
-                selectedCard.ClearCard();
-                cuurentPlayer.cards.RemoveAt(selectedCard.idx);
-                foreach (var cardObject in cardObjects)
-                {
-                    Card card = cardObject.GetComponent<Card>();
-                    card.UpdateCard();
-                }
-            }
-
-            // Clear the selected card and target references
-            selectedCard.ResetCard();
-            selectedCard = null;
-            selectedEnemy = null;
         }
     }
 }

@@ -155,10 +155,10 @@ MonoBehaviour:
     description: 
     attack: 0
     healthChange: 20
-  - name: emergency_medicine_kit
+  - name: mutilated_dagger
     description: 
-    attack: 0
-    healthChange: 20
+    attack: 1
+    healthChange: -20
 --- !u!114 &1182438523673240892
 MonoBehaviour:
   m_ObjectHideFlags: 0

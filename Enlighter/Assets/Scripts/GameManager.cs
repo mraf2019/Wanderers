@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         SpawnPlayer();
         StartCoroutine("RefreshResource");
+        PlayerPrefs.SetInt("totalNum", PhotonNetwork.playerList.Length);
     }
 
     public void PlayerDestroyed()

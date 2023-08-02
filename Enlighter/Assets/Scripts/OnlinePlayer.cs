@@ -17,10 +17,12 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public List<CardInfo> cards = new List<CardInfo>();
     public SkillInfo mySkill;
 
+    public bool isInvincible = false;
+
     private Vector2 lookDirection = new Vector2(1, 0);
     private int currentHealth;
+    private bool isSelf = false;
 
-    public bool isInvincible = false;
     private float invincibleTimer;
     private float timeInvincible = 3.0f;
 
@@ -58,10 +60,12 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             playerCamera.SetActive(true);
+            isSelf = true;
             OnlineSkillManager skill = GameObject.Find("Canvas/GameUI/Skill").GetComponent<OnlineSkillManager>();
             skill.skill = mySkill;
             Debug.Log("skillinfo loaded");
         }
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -135,13 +139,13 @@ public class OnlinePlayer : Photon.MonoBehaviour
         animator.SetFloat("Move Y", rb.velocity.y);
     }
 
+    [PunRPC]
     public void ChangeHealth(int amount, bool isRegion)
     {
         if (amount < 0)
         {
             if (isInvincible)
                 return;
-            Debug.Log(amount);
             animator.SetTrigger("Hit");
             if (isRegion)
             {
@@ -192,17 +196,22 @@ public class OnlinePlayer : Photon.MonoBehaviour
         cards.Add(card);
     }
 
-//    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-//    {
-//        if (stream.isWriting)
-//        {
-//            stream.SendNext(rb.velocity.x);
-//            stream.SendNext(rb.velocity.y);
-//        }
-//        else
-//        {
-//            rb.velocity.x = stream.ReceiveNext();
+    public void OnPointerClick()
+    {
+        // Notify the card manager (or other script) about the target selection
+        OnlineCardManager.Instance.OnTargetPlayerSelected(this, isSelf);
+    }
 
-//        }
-//    }
+    //void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    if (stream.isWriting)
+    //    {
+    //        stream.SendNext(currentHealth);
+    //    }
+    //    else
+    //    {
+    //        this.currentHealth = (int)stream.ReceiveNext();
+
+    //    }
+    //}
 }
