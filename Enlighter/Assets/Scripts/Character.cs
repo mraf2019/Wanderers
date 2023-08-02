@@ -20,6 +20,7 @@ public class Character : MonoBehaviour
     public void ResetCharacter()
     {
         tf.localScale = new Vector2(initialX, initialY);
+        tf.position = tf.position - new Vector3(0, 78, 0);
         isSelected = false;
     }
     public void OnPointerClick()
@@ -29,6 +30,7 @@ public class Character : MonoBehaviour
         {
             Vector2 scaleUp = new Vector2(initialX + 0.2f, initialY + 0.2f);
             tf.localScale = scaleUp;
+            tf.position = tf.position + new Vector3(0, 78, 0);
             Debug.Log("selected");
         }
         else

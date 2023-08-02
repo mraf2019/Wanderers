@@ -21,8 +21,11 @@ public class CharacterManager : MonoBehaviour
     {
         if(selectedCharacter != null && selectedCharacter != character)
         {
-            selectedCharacter.ResetCharacter();
-            selectedCharacter.isSelected = false;
+            if (selectedCharacter.isSelected)
+            {
+                selectedCharacter.ResetCharacter();
+                selectedCharacter.isSelected = false;
+            }
         }
 
         selectedCharacter = character;
