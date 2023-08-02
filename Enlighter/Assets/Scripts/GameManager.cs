@@ -86,10 +86,8 @@ public class GameManager : MonoBehaviour
         int idx = Random.Range(0, positions.Length / 2);
         Debug.Log("position length: " + positions.Length/2);
         Debug.Log("random index: " + idx);
-        //float randomX = positions[idx, 0];
-        //float randomY = positions[idx, 1];
-        float randomX = 38;
-        float randomY = -84;
+        float randomX = positions[idx, 0];
+        float randomY = positions[idx, 1];
         PhotonNetwork.Instantiate(playerPrefab[playerindex].name,
             new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
             Quaternion.identity,
