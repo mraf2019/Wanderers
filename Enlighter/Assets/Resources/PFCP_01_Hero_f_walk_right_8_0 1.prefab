@@ -398,9 +398,11 @@ MonoBehaviour:
   animator: {fileID: 593319136883593491}
   playerCamera: {fileID: 5156142553402219570}
   PlayerNameText: {fileID: 4473379931360516026}
+  userName: 
   maxHealth: 100
   initialSpeed: 4
   speed: 4
+  currency: 1000
   cards: []
   mySkill:
     name: Ivy
