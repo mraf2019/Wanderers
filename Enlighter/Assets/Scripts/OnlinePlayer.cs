@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Cinemachine;
 
 public class OnlinePlayer : Photon.MonoBehaviour
 {
@@ -25,6 +22,8 @@ public class OnlinePlayer : Photon.MonoBehaviour
     private float invincibleTimer;
     private float timeInvincible = 3.0f;
 
+    private OnlineCardManager Cards;
+
     private void Awake()
     {
         if (photonView.isMine)
@@ -40,6 +39,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Cards = OnlineCardManager.Instance;
         if (photonView.isMine)
         {
             playerCamera.SetActive(true);
@@ -52,6 +52,11 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             Move();
+            Cards.cuurentPlayer = this;
+            for (int i = 0; i < 5; i++)
+            {
+                Cards.transform.GetChild(i).gameObject.GetComponent<OnlineCard>().player = this;
+            }
         }
         if (isInvincible)
         {
