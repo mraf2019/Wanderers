@@ -152,6 +152,10 @@ public class OnlinePlayer : Photon.MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
         UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
+        if (currentHealth <= 0)
+        {
+            GameManager.Instance.EndGame();
+        }
     }
 
     public void ChangeSpeed(int times, bool increase)

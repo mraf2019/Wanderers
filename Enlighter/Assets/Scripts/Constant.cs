@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Constanat : MonoBehaviour
 {
-    public const float refreshInterval = 2 * 60f;  // 2 min
+    public const float refreshInterval = 2 * 10f;  // 2 min
     public static float[,] positions =
     {
         {18,34 },

@@ -7,6 +7,8 @@ public class GameMenu : MonoBehaviour
 {
     public void ExitGame()
     {
+        PhotonNetwork.Disconnect();
+        Debug.Log(PhotonNetwork.connectionStateDetailed.ToString());
         SceneManager.LoadScene("Start Menu");
     }
     public void EnterCharacter()
