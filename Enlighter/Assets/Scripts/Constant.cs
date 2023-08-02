@@ -41,7 +41,7 @@ public class Constanat : MonoBehaviour
     {
         new CardInfo
         {
-            name ="SharpStone",
+            name ="Sharp_Stone",
             id = 1,
             attack = true,
             healthChange = 5,
@@ -52,7 +52,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="BrokenDagger",
+            name ="Broken_Dagger",
             id = 2,
             attack = true,
             healthChange = 10,
@@ -63,7 +63,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="ExpiredEnergyDrink",
+            name ="Expired_Energy_Drink",
             id = 3,
             attack = true,
             healthChange = 15,
@@ -74,7 +74,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="MobiusBlade",
+            name ="Mobius_Blade",
             id = 4,
             attack = true,
             healthChange = 30,
@@ -85,7 +85,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="JarofCompressedEther",
+            name ="Jar_of_Compressed_Ether",
             id = 5,
             attack = true,
             healthChange = 35,
@@ -96,7 +96,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="MagicBookwithBlurredCover",
+            name ="Magic_Book_with_Blurred_Cover",
             id = 6,
             attack = true,
             healthChange = 15,
@@ -107,7 +107,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="PromisedLand",
+            name ="Promised_Land",
             id = 7,
             attack = false,
             healthChange = 0,
@@ -118,7 +118,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="GodsPunishment",
+            name ="Gods_Punishment",
             id = 8,
             attack = true,
             healthChange = 25,
@@ -129,7 +129,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="LayonHands",
+            name ="Lay_on_Hands",
             id = 9,
             attack = false,
             healthChange = 25,
@@ -140,7 +140,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="HolyBlessing",
+            name ="Holy_Blessing",
             id = 10,
             attack = false,
             healthChange = 0,
@@ -151,7 +151,7 @@ public class Constanat : MonoBehaviour
         },
         new CardInfo
         {
-            name ="DreamofEnlightenment",
+            name ="Dream_of_Enlightenment",
             id = 11,
             attack = false,
             healthChange = 15,
