@@ -79,7 +79,7 @@ public class OnlineSkillManager : MonoBehaviour
                 // Implement your skill's effect logic here
                 // For example: selectedSkill.UseEffect(target);
                 selectedPlayer = player;
-                selectedPlayer.ChangeHealth(skill.healthChange);
+                selectedPlayer.ChangeHealth(skill.healthChange, false);
 
                 // Reset the card's selection state after using the skill
                 isSelected = false;
