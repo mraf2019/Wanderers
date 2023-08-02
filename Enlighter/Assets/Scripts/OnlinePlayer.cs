@@ -182,13 +182,17 @@ public class OnlinePlayer : Photon.MonoBehaviour
         }
     }
 
-    public void ChangeSpeed(int times, bool increase)
+    public void ChangeSpeed(float times, bool increase)
     {
         if (times > 0)
         {
             if (isInvincible)
                 return;
             Debug.Log(times);
+            if(increase)
+                isSpeedUp = true;
+            else
+                isSpeedDown = true;
             animator.SetTrigger("Hit");
             if (increase)
             {
@@ -231,5 +235,17 @@ public class OnlinePlayer : Photon.MonoBehaviour
             return;
         }
         ChangeHealth(amount, false);
+    }
+
+    [PunRPC]
+    public void ChangeSpeed(int amount, string target)
+    {
+        bool negative = amount < 0;
+        if(target != userName)
+            return;
+        if(negative)
+            ChangeSpeed(-amount,!negative);
+        else
+            ChangeSpeed(amount,!negative);
     }
 }

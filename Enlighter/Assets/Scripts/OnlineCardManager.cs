@@ -68,7 +68,19 @@ public class OnlineCardManager : MonoBehaviour
                     card.UpdateCard();
                 }
             }
-
+            if((isSelf && selectedCard.card.speedChange > 0)||(!isSelf && selectedCard.card.speedChange < 0))
+            {
+                selectedPlayer = player;
+                selectedPlayer.photonView.RPC("ChangeSpeed", PhotonTargets.AllViaServer, selectedCard.card.speedChange, selectedPlayer.userName);
+                selectedCard.isSelected = false;
+                selectedCard.ClearCard();
+                cuurentPlayer.cards.RemoveAt(selectedCard.idx);
+                foreach (var cardObject in cardObjects)
+                {
+                    OnlineCard card = cardObject.GetComponent<OnlineCard>();
+                    card.UpdateCard();
+                }
+            }
             // Clear the selected card and target references
             selectedCard.ResetCard();
             selectedCard = null;

@@ -100,10 +100,10 @@ public class Constanat : MonoBehaviour
             id = 6,
             attack = true,
             healthChange = 15,
-            speedChange = -0.1f,
+            speedChange = -0.3f,
             money = 10,
             invincible = false,
-            price = 200
+            price = 450
         },
         new CardInfo
         {
@@ -111,7 +111,7 @@ public class Constanat : MonoBehaviour
             id = 7,
             attack = false,
             healthChange = 0,
-            speedChange = -0.2f,
+            speedChange = 0.1f,
             money = 0,
             invincible = true,
             price = 700
@@ -122,10 +122,10 @@ public class Constanat : MonoBehaviour
             id = 8,
             attack = true,
             healthChange = 25,
-            speedChange = -0.1f,
+            speedChange = -0.5f,
             money = 0,
             invincible = false,
-            price = 450
+            price = 600
         },
         new CardInfo
         {
@@ -144,7 +144,7 @@ public class Constanat : MonoBehaviour
             id = 10,
             attack = false,
             healthChange = 0,
-            speedChange = 0.5f,
+            speedChange = 0.8f,
             money = 0,
             invincible = false,
             price = 400
@@ -154,7 +154,7 @@ public class Constanat : MonoBehaviour
             name ="Dream_of_Enlightenment",
             id = 11,
             attack = false,
-            healthChange = 15,
+            healthChange = 30,
             speedChange = 0,
             money = 20,
             invincible = false,

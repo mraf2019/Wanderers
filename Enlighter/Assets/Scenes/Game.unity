@@ -8766,7 +8766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c654489388eba94094f846bdf850436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDownIcon: {fileID: 0}
+  speedDownIcon: {fileID: 599366793}
 --- !u!4 &600221744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5313877120419022430, guid: d0023fb38b0bd6f448edf0bd6d204e8c, type: 3}
@@ -23281,7 +23281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471da8831c4ea87449e9b060d7dd8db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invincibleIcon: {fileID: 0}
+  invincibleIcon: {fileID: 941696585}
 --- !u!114 &941696585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50915,7 +50915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0239b481e9fbb3e419db258f9d580a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUpIcon: {fileID: 0}
+  speedUpIcon: {fileID: 1517618686}
 --- !u!1001 &1519457795
 PrefabInstance:
   m_ObjectHideFlags: 0
