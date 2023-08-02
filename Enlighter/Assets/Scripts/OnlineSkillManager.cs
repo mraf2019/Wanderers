@@ -155,12 +155,12 @@ public class OnlineSkillManager : MonoBehaviour
 
     private void Update()
     {
-        if (skill.name != "" && !ifLoaded)
+        if (skill.name != "" && !ifLoaded && photonView.isMine)
         {
             img.sprite = Resources.Load<Sprite>("Skills/" + skill.name);
             ifLoaded = true;
         }
-        if (ifStartTimer)
+        if (ifStartTimer && photonView.isMine)
         {
             timer += Time.deltaTime;
             filledImage.fillAmount = (coldTime - timer) / coldTime;

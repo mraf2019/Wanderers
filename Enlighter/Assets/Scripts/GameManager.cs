@@ -112,4 +112,12 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(Constanat.refreshInterval);
         }
     }
+
+    //private void Update()
+    //{
+    //    if (PhotonNetwork.playerList.Length == 1)
+    //    {
+    //        EndGame();
+    //    }
+    //}
 }
