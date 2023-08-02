@@ -3,7 +3,7 @@
         {
             "name": "SharpStone",
             "id": 1,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 5,
             "speed_change": 0,
             "money": 30,
@@ -14,7 +14,7 @@
         {
             "name": "BrokenDagger",
             "id": 2,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 10,
             "speed_change": 0,
             "money": 25,
@@ -24,7 +24,7 @@
         {
             "name": "ExpiredEnergyDrink",
             "id": 3,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 15,
             "speed_change": 0,
             "money": 20,
@@ -34,7 +34,7 @@
         {
             "name": "MobiusBlade",
             "id": 4,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 30,
             "speed_change": 0,
             "money": 5,
@@ -44,7 +44,7 @@
         {
             "name": "JarofCompressedEther",
             "id": 5,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 35,
             "speed_change": 0,
             "money": 0,
@@ -54,7 +54,7 @@
         {
             "name": "MagicBookwithBlurredCover",
             "id": 6,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 15,
             "speed_change": -0.1,
             "money": 10,
@@ -64,7 +64,7 @@
         {
             "name": "PromisedLand",
             "id": 7,
-            "object":"self",
+            "is_attack":"self",
             "health_change": 0,
             "speed_change": -0.2,
             "money": 0,
@@ -74,7 +74,7 @@
         {
             "name": "GodsPunishment",
             "id": 8,
-            "object":"enemy",
+            "is_attack":"enemy",
             "health_change": 25,
             "speed_change": -0.1,
             "money": 0,
@@ -84,7 +84,7 @@
         {
             "name": "LayonHands",
             "id": 9,
-            "object":"self",
+            "is_attack":"self",
             "health_change": 25,
             "speed_change": 0,
             "money": 5,
@@ -94,7 +94,7 @@
         {
             "name": "HolyBlessing",
             "id": 10,
-            "object":"self",
+            "is_attack":"self",
             "health_change": 0,
             "speed_change": 0.5,
             "money": 0,
@@ -104,7 +104,7 @@
         {
             "name": "DreamofEnlightenment",
             "id": 11,
-            "object":"self",
+            "is_attack":"self",
             "health_change": 15,
             "speed_change": 0,
             "money": 20,
