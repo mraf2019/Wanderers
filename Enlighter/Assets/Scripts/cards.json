@@ -60,8 +60,8 @@
             "id": 7,
             "object":"self",
             "health_change": 0,
-            "speed_change": 0,
-            "money": -100,
+            "speed_change": -0.2,
+            "money": 0,
             "invincible": 1
         },
         {
