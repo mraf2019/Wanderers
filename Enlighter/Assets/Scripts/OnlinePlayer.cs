@@ -99,7 +99,9 @@ public class OnlinePlayer : Photon.MonoBehaviour
             if (speedupTimer < 0)
             {
                 isSpeedUp = false;
+                speed = initialSpeed;
                 speedupTimes = 0;
+                speedupTimer = 0;
             }
         }
         if (isSpeedDown)
@@ -108,7 +110,9 @@ public class OnlinePlayer : Photon.MonoBehaviour
             if (speeddownTimer < 0)
             {
                 isSpeedDown = false;
+                speed = initialSpeed;
                 speeddownTimes = 0;
+                speedupTimer = 0;
             }
         }
 
@@ -238,14 +242,16 @@ public class OnlinePlayer : Photon.MonoBehaviour
     }
 
     [PunRPC]
-    public void ChangeSpeed(int amount, string target)
+    public void ChangeSpeed(float amount, string target)
     {
         bool negative = amount < 0;
+        Debug.Log(target);
+        Debug.Log(negative);
         if(target != userName)
             return;
         if(negative)
-            ChangeSpeed(-amount,!negative);
-        else
             ChangeSpeed(amount,!negative);
+        else
+            ChangeSpeed(amount,negative);
     }
 }
