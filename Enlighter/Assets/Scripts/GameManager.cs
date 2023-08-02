@@ -61,10 +61,6 @@ public class GameManager : MonoBehaviour
     {
         int playerRemain = PhotonNetwork.playerList.Length;
         PlayerPrefs.SetInt("rank", playerRemain);
-        if (PhotonNetwork.isMasterClient)
-        {
-            //todo: transfer masterClient position
-        }
         PhotonNetwork.Disconnect();
         // Show the game over screen or perform other actions
         SceneManager.LoadScene("Result");
@@ -120,11 +116,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (PhotonNetwork.playerList.Length == 1)
-    //    {
-    //        EndGame();
-    //    }
-    //}
+    private void Update()
+    {
+        if (PhotonNetwork.playerList.Length == 1)
+        {
+            EndGame();
+        }
+    }
 }
