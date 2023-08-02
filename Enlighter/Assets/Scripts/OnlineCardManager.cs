@@ -50,15 +50,13 @@ public class OnlineCardManager : MonoBehaviour
         // If a card is selected and a target is clicked, use the card's effect on the target
         if (selectedCard != null)
         {
-            Debug.Log(isSelf);
-            Debug.Log(selectedCard.card.healthChange);
             if ((isSelf && !selectedCard.card.attack) || (!isSelf && selectedCard.card.attack))
             {
                 // Implement your card's effect logic here
                 // For example: selectedCard.UseEffect(target);
                 selectedPlayer = player;
-                PhotonView photonView = PhotonView.Get(selectedPlayer);
-                photonView.RPC("ChangeHealth", PhotonTargets.Others, selectedCard.card.healthChange, false);
+                //selectedPlayer.ChangeHealth(selectedCard.card.healthChange, false);
+                selectedPlayer.photonView.RPC("Hurt", PhotonTargets.AllViaServer, selectedCard.card.healthChange, selectedPlayer.userName);
 
                 // Reset the card's selection state after using the card
                 selectedCard.isSelected = false;

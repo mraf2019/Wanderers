@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class OnlinePlayer : Photon.MonoBehaviour
 {
     public PhotonView photonView;
@@ -8,6 +9,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public Animator animator;
     public GameObject playerCamera;
     public TMPro.TMP_Text PlayerNameText;
+    public string userName;
 
     public int maxHealth = 100;
     public float initialSpeed = 4;
@@ -46,11 +48,11 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             PlayerNameText.text = PhotonNetwork.player.NickName;
+            PlayerNameText.color = Color.cyan;
         }
         else
         {
             PlayerNameText.text = photonView.owner.NickName;
-            PlayerNameText.color = Color.cyan;
         }
     }
     // Start is called before the first frame update
@@ -66,6 +68,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
             Debug.Log("skillinfo loaded");
         }
         currentHealth = maxHealth;
+        userName = photonView.photonView.owner.NickName;
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             Move();
+            UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
             Cards.cuurentPlayer = this;
             for (int i = 0; i < 5; i++)
             {
@@ -151,6 +155,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
 
     public void ChangeHealth(int amount, bool isRegion)
     {
+
         if (amount < 0)
         {
             if (isInvincible)
@@ -164,7 +169,6 @@ public class OnlinePlayer : Photon.MonoBehaviour
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
-        UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
         if (currentHealth <= 0)
         {
             GameManager.Instance.EndGame();
@@ -210,16 +214,14 @@ public class OnlinePlayer : Photon.MonoBehaviour
         OnlineCardManager.Instance.OnTargetPlayerSelected(this, isSelf);
     }
 
-    //void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    //{
-    //    if (stream.isWriting)
-    //    {
-    //        stream.SendNext(currentHealth);
-    //    }
-    //    else
-    //    {
-    //        this.currentHealth = (int)stream.ReceiveNext();
-
-    //    }
-    //}
+    [PunRPC]
+    public void Hurt(int amount, string target)
+    {
+        Debug.Log(target);
+        if (target != userName)
+        {
+            return;
+        }
+        ChangeHealth(amount, false);
+    }
 }
