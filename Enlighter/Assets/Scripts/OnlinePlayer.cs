@@ -139,7 +139,13 @@ public class OnlinePlayer : Photon.MonoBehaviour
         animator.SetFloat("Move Y", rb.velocity.y);
     }
 
-    [PunRPC]
+    public void ChangeCurrency(int amount)
+    {
+        if(currency + amount < 0)
+            return;
+        UIDecuts.instance.Setvalue(currency + amount);
+    }
+
     public void ChangeHealth(int amount, bool isRegion)
     {
         if (amount < 0)
