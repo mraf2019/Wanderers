@@ -29,12 +29,11 @@ public class OnlinePlayer : Photon.MonoBehaviour
     {
         if (photonView.isMine)
         {
-            //playerCamera.SetActive(true);
-            PlayerNameText.text = PhotonNetwork.playerName;
+            PlayerNameText.text = PhotonNetwork.player.NickName;
         }
         else
         {
-            PlayerNameText.text = photonView.owner.name;
+            PlayerNameText.text = photonView.owner.NickName;
             PlayerNameText.color = Color.cyan;
         }
     }

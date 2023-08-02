@@ -397,7 +397,7 @@ MonoBehaviour:
   rb: {fileID: 634425803509087944}
   animator: {fileID: 593319136883593491}
   playerCamera: {fileID: 5156142553402219570}
-  PlayerNameText: {fileID: 0}
+  PlayerNameText: {fileID: 4473379931360516026}
   maxHealth: 100
   speed: 4
   cards: []
@@ -406,6 +406,7 @@ MonoBehaviour:
     description: 
     attack: 1
     healthChange: -20
+  isInvincible: 0
 --- !u!114 &5631832092208033884
 MonoBehaviour:
   m_ObjectHideFlags: 0
