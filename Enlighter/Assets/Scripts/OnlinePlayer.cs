@@ -10,6 +10,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public TMPro.TMP_Text PlayerNameText;
 
     public int maxHealth = 100;
+    public float initialSpeed = 4;
     public float speed = 4;
 
     public List<CardInfo> cards = new List<CardInfo>();
@@ -21,6 +22,19 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public bool isInvincible = false;
     private float invincibleTimer;
     private float timeInvincible = 3.0f;
+
+    //speed related
+    public bool isSpeedUp = false;
+    private float speedupTimer;
+    private float speedupTimes = 0;
+    private float timeSpeedUp = 10.0f;
+
+    public bool isSpeedDown = false;
+    private float speeddownTimer;
+    private float speeddownTimes = 0;
+    private float timeSpeedDown = 10.0f;
+
+    float speedTimes;
 
     private OnlineCardManager Cards;
 
@@ -67,6 +81,31 @@ public class OnlinePlayer : Photon.MonoBehaviour
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
+        if (isSpeedUp)
+        {
+            speedupTimer -= Time.deltaTime;
+            if (speedupTimer < 0)
+            {
+                isSpeedUp = false;
+                speedupTimes = 0;
+            }
+        }
+        if (isSpeedDown)
+        {
+            speeddownTimer -= Time.deltaTime;
+            if (speeddownTimer < 0)
+            {
+                isSpeedDown = false;
+                speeddownTimes = 0;
+            }
+        }
+
+        // determine speed up or speed down status
+        if (speed > initialSpeed) SpeedUpStatus.instance.SetSpeedUp(true);
+        else if (speed <= initialSpeed) SpeedUpStatus.instance.SetSpeedUp(false);
+
+        if (speed < initialSpeed) SpeedDownStatus.instance.SetSpeedDown(true);
+        else if (speed >= initialSpeed) SpeedDownStatus.instance.SetSpeedDown(false);
     }
 
     private void Move()
@@ -112,6 +151,35 @@ public class OnlinePlayer : Photon.MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
         UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
+    }
+
+    public void ChangeSpeed(int times, bool increase)
+    {
+        if (times > 0)
+        {
+            if (isInvincible)
+                return;
+            Debug.Log(times);
+            animator.SetTrigger("Hit");
+            if (increase)
+            {
+                speedupTimer = 10f;
+                speedupTimes += times;
+            }
+            else
+            {
+                speeddownTimer = 10f;
+                speeddownTimes += times;
+            }
+        }
+
+        // calculate speed
+        if (speedupTimes != 0 || speeddownTimes != 0)
+        {
+            speedTimes = speedupTimes - speeddownTimes;
+            speed = initialSpeed * (1 + speedTimes);
+        }
+        
     }
 
     public void CollectCards(CardInfo card)

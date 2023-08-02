@@ -399,6 +399,7 @@ MonoBehaviour:
   playerCamera: {fileID: 5156142553402219570}
   PlayerNameText: {fileID: 4473379931360516026}
   maxHealth: 100
+  initialSpeed: 4
   speed: 4
   cards: []
   mySkill:
@@ -407,6 +408,8 @@ MonoBehaviour:
     attack: 1
     healthChange: -20
   isInvincible: 0
+  isSpeedUp: 0
+  isSpeedDown: 0
 --- !u!114 &5631832092208033884
 MonoBehaviour:
   m_ObjectHideFlags: 0
