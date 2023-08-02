@@ -3,19 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+[System.Serializable]
+public struct CardInfoRaw
+{
+    [SerializeField] public int name;
+    [SerializeField] public string id;
+    [SerializeField] public string is_attack;
+    [SerializeField] public bool health_change;
+    [SerializeField] public bool speed_change;
+    [SerializeField] public int money;
+    [SerializeField] public int invincible;
+    [SerializeField] public int price;
+}
 
 public class ShopCard : MonoBehaviour
 {
     public int idx;
     public CardInfo card;
-    public List<CardInfo> cards = new List<CardInfo>();
 
     private Image img;
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
+        
     }
 
     void UpdateCard()
