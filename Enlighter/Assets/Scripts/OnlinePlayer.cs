@@ -105,12 +105,15 @@ public class OnlinePlayer : Photon.MonoBehaviour
             }
         }
 
-        // determine speed up or speed down status
+        // determine status
         if (speed > initialSpeed) SpeedUpStatus.instance.SetSpeedUp(true);
         else if (speed <= initialSpeed) SpeedUpStatus.instance.SetSpeedUp(false);
 
         if (speed < initialSpeed) SpeedDownStatus.instance.SetSpeedDown(true);
         else if (speed >= initialSpeed) SpeedDownStatus.instance.SetSpeedDown(false);
+
+        if (isInvincible) InvincibleStatus.instance.SetInvincible(true);
+        else InvincibleStatus.instance.SetInvincible(false);
     }
 
     private void Move()
@@ -139,7 +142,13 @@ public class OnlinePlayer : Photon.MonoBehaviour
         animator.SetFloat("Move Y", rb.velocity.y);
     }
 
-    [PunRPC]
+    public void ChangeCurrency(int amount)
+    {
+        if(currency + amount < 0)
+            return;
+        UIDecuts.instance.Setvalue(currency + amount);
+    }
+
     public void ChangeHealth(int amount, bool isRegion)
     {
         if (amount < 0)
@@ -188,7 +197,6 @@ public class OnlinePlayer : Photon.MonoBehaviour
             speedTimes = speedupTimes - speeddownTimes;
             speed = initialSpeed * (1 + speedTimes);
         }
-        
     }
 
     public void CollectCards(CardInfo card)
