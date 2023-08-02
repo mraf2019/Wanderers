@@ -5,7 +5,6 @@ public class ShopController : MonoBehaviour
 {
     public static ShopController Instance;
     public int count = 3;
-    public List<CardInfo> cards = new List<CardInfo>();
     private List<GameObject> cardObjects = new List<GameObject>();
     public OnlinePlayer currentPlayer;
 

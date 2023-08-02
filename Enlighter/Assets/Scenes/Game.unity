@@ -45416,7 +45416,7 @@ GameObject:
   - component: {fileID: 1317134294}
   - component: {fileID: 1317134293}
   - component: {fileID: 1317134292}
-  - component: {fileID: 1317134291}
+  - component: {fileID: 1317134295}
   m_Layer: 5
   m_Name: Card1
   m_TagString: Untagged
@@ -45445,33 +45445,6 @@ RectTransform:
   m_AnchoredPosition: {x: -265.66, y: 33}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1317134291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317134289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4cdc668ecf7456fa8d347978735b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idx: 0
-  isSelected: 0
-  initialX: 0
-  initialY: 0
-  card:
-    id: 0
-    name: 
-    description: 
-    attack: 0
-    invincible: 0
-    healthChange: 0
-    speedChange: 0
-    money: 0
-    price: 0
-  player: {fileID: 0}
 --- !u!114 &1317134292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45489,7 +45462,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1317134291}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: OnlineCard, Assembly-CSharp
           m_MethodName: OnPointerClick
           m_Mode: 1
@@ -45539,6 +45512,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317134289}
   m_CullTransparentMesh: 1
+--- !u!114 &1317134295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317134289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561211d0c6a9b40478005e5f88995458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idx: 0
+  card:
+    id: 0
+    name: 
+    description: 
+    attack: 0
+    invincible: 0
+    healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
+  img: {fileID: 1317134293}
 --- !u!1 &1318349400
 GameObject:
   m_ObjectHideFlags: 0
@@ -50860,7 +50857,7 @@ GameObject:
   - component: {fileID: 1544669948}
   - component: {fileID: 1544669947}
   - component: {fileID: 1544669946}
-  - component: {fileID: 1544669945}
+  - component: {fileID: 1544669949}
   m_Layer: 5
   m_Name: Card3
   m_TagString: Untagged
@@ -50889,33 +50886,6 @@ RectTransform:
   m_AnchoredPosition: {x: 265.66, y: 33}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1544669945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544669943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4cdc668ecf7456fa8d347978735b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idx: 2
-  isSelected: 0
-  initialX: 0
-  initialY: 0
-  card:
-    id: 0
-    name: 
-    description: 
-    attack: 0
-    invincible: 0
-    healthChange: 0
-    speedChange: 0
-    money: 0
-    price: 0
-  player: {fileID: 0}
 --- !u!114 &1544669946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50933,7 +50903,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1544669945}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: OnlineCard, Assembly-CSharp
           m_MethodName: OnPointerClick
           m_Mode: 1
@@ -50983,6 +50953,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544669943}
   m_CullTransparentMesh: 1
+--- !u!114 &1544669949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544669943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561211d0c6a9b40478005e5f88995458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idx: 2
+  card:
+    id: 0
+    name: 
+    description: 
+    attack: 0
+    invincible: 0
+    healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
+  img: {fileID: 1544669947}
 --- !u!1001 &1546755907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86175,9 +86169,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671043957}
-  - component: {fileID: 1671043960}
   - component: {fileID: 1671043959}
   - component: {fileID: 1671043958}
+  - component: {fileID: 1671043960}
   m_Layer: 5
   m_Name: Cards
   m_TagString: Untagged
@@ -86255,10 +86249,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1671043956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f874976a2474a41d48369815c2c7f273, type: 3}
+  m_Script: {fileID: 11500000, guid: d00cee1be824b7d4698d41db1d19f94c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cuurentPlayer: {fileID: 0}
+  count: 3
+  currentPlayer: {fileID: 0}
 --- !u!1001 &1671061143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90040,7 +90035,7 @@ GameObject:
   - component: {fileID: 1918622345}
   - component: {fileID: 1918622344}
   - component: {fileID: 1918622343}
-  - component: {fileID: 1918622342}
+  - component: {fileID: 1918622346}
   m_Layer: 5
   m_Name: Card2
   m_TagString: Untagged
@@ -90069,33 +90064,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030518, y: 33}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1918622342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918622340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4cdc668ecf7456fa8d347978735b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idx: 1
-  isSelected: 0
-  initialX: 0
-  initialY: 0
-  card:
-    id: 0
-    name: 
-    description: 
-    attack: 0
-    invincible: 0
-    healthChange: 0
-    speedChange: 0
-    money: 0
-    price: 0
-  player: {fileID: 0}
 --- !u!114 &1918622343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90113,7 +90081,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1918622342}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: OnlineCard, Assembly-CSharp
           m_MethodName: OnPointerClick
           m_Mode: 1
@@ -90163,6 +90131,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918622340}
   m_CullTransparentMesh: 1
+--- !u!114 &1918622346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918622340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561211d0c6a9b40478005e5f88995458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idx: 1
+  card:
+    id: 0
+    name: 
+    description: 
+    attack: 0
+    invincible: 0
+    healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
+  img: {fileID: 1918622344}
 --- !u!4 &1921672192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3405034412937924662, guid: 8a0a17c3f919238429bc36930e4a09b6, type: 3}

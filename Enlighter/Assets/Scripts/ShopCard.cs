@@ -7,20 +7,18 @@ public class ShopCard : MonoBehaviour
 {
     public int idx;
     public CardInfo card;
+    public Image img;
 
-    private Image img;
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
-        
     }
 
     public void UpdateCard()
     {
         if(idx < ShopController.Instance.count)
         {
-            card = ShopController.Instance.cards[idx];
             Sprite cardImg = Resources.Load<Sprite>("Cards/" + card.name);
             img.sprite = cardImg;
         }
