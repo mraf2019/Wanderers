@@ -13,7 +13,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public float speed = 4;
 
     public List<CardInfo> cards = new List<CardInfo>();
-    public SkillInfo skill;
+    public SkillInfo mySkill;
 
     private Vector2 lookDirection = new Vector2(1, 0);
     private int currentHealth;
@@ -43,6 +43,9 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             playerCamera.SetActive(true);
+            OnlineSkillManager skill = GameObject.Find("Canvas/GameUI/Skill").GetComponent<OnlineSkillManager>();
+            skill.skill = mySkill;
+            Debug.Log("skillinfo loaded");
         }
     }
 
