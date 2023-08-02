@@ -5,10 +5,15 @@ using UnityEngine.EventSystems;
 [System.Serializable]
 public struct CardInfo
 {
+    [SerializeField] public int id;
     [SerializeField] public string name;
     [SerializeField] public string description;
     [SerializeField] public bool attack;
+    [SerializeField] public bool invincible;
     [SerializeField] public int healthChange;
+    [SerializeField] public int speedChange;
+    [SerializeField] public int money;
+    [SerializeField] public int price;
 }
 
 public class Card : MonoBehaviour

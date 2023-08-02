@@ -7,7 +7,8 @@
             "health_change": 5,
             "speed_change": 0,
             "money": 30,
-            "invincible": 0
+            "invincible": 0,
+            "price": 150
         },
 
         {
@@ -17,7 +18,8 @@
             "health_change": 10,
             "speed_change": 0,
             "money": 25,
-            "invincible": 0
+            "invincible": 0,
+            "price": 250
         },
         {
             "name": "ExpiredEnergyDrink",
@@ -26,7 +28,8 @@
             "health_change": 15,
             "speed_change": 0,
             "money": 20,
-            "invincible": 0
+            "invincible": 0,
+            "price": 150
         },
         {
             "name": "MobiusBlade",
@@ -35,7 +38,8 @@
             "health_change": 30,
             "speed_change": 0,
             "money": 5,
-            "invincible": 0
+            "invincible": 0,
+            "price": 300
         },
         {
             "name": "JarofCompressedEther",
@@ -44,7 +48,8 @@
             "health_change": 35,
             "speed_change": 0,
             "money": 0,
-            "invincible": 0
+            "invincible": 0,
+            "price": 350
         },
         {
             "name": "MagicBookwithBlurredCover",
@@ -53,7 +58,8 @@
             "health_change": 15,
             "speed_change": -0.1,
             "money": 10,
-            "invincible": 0
+            "invincible": 0,
+            "price": 200
         },
         {
             "name": "PromisedLand",
@@ -62,7 +68,8 @@
             "health_change": 0,
             "speed_change": -0.2,
             "money": 0,
-            "invincible": 1
+            "invincible": 1,
+            "price": 700
         },
         {
             "name": "GodsPunishment",
@@ -71,7 +78,8 @@
             "health_change": 25,
             "speed_change": -0.1,
             "money": 0,
-            "invincible": 0
+            "invincible": 0,
+            "price": 450
         },
         {
             "name": "LayonHands",
@@ -80,7 +88,8 @@
             "health_change": 25,
             "speed_change": 0,
             "money": 5,
-            "invincible": 0
+            "invincible": 0,
+            "price": 400
         },
         {
             "name": "HolyBlessing",
@@ -89,7 +98,8 @@
             "health_change": 0,
             "speed_change": 0.5,
             "money": 0,
-            "invincible": 0
+            "invincible": 0,
+            "price": 400
         },
         {
             "name": "DreamofEnlightenment",
@@ -98,7 +108,8 @@
             "health_change": 15,
             "speed_change": 0,
             "money": 20,
-            "invincible": 0
+            "invincible": 0,
+            "price": 500
         },
     ]
 }
