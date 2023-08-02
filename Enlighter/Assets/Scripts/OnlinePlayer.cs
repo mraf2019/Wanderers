@@ -12,6 +12,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public int maxHealth = 100;
     public float initialSpeed = 4;
     public float speed = 4;
+    public int currency = 1000;
 
     public List<CardInfo> cards = new List<CardInfo>();
     public SkillInfo mySkill;
