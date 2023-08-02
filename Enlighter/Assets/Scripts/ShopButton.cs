@@ -17,7 +17,7 @@ public class ShopButton : MonoBehaviour
         Debug.Log(-1 * price);
         currentPlayer.ChangeCurrency(-1 * price);
         currentPlayer.CollectCards(card.card);
-        card.UpdateCard();
+        card.UpdatePlayerCards();
         card.ClearCard();
     }
 }

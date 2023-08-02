@@ -24,6 +24,19 @@ public class ShopCard : MonoBehaviour
 
     public void UpdateCard()
     {
+        if (idx < ShopController.Instance.count)
+        {
+            Sprite cardImg = Resources.Load<Sprite>("Cards/" + card.name);
+            img.sprite = cardImg;
+        }
+        else
+        {
+            ClearCard();
+        }
+    }
+
+    public void UpdatePlayerCards()
+    {
         foreach (var cardObject in cardObjects)
         {
             OnlineCard card = cardObject.GetComponent<OnlineCard>();
