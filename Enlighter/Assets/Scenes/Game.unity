@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 31190516}
   - component: {fileID: 31190518}
   - component: {fileID: 31190517}
+  - component: {fileID: 31190519}
   m_Layer: 5
   m_Name: Portrait
   m_TagString: Untagged
@@ -472,6 +473,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31190515}
   m_CullTransparentMesh: 1
+--- !u!114 &31190519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31190515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1582dc2a455bf2a45a0c43ffad7d395a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerindex: 0
 --- !u!4 &31218515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3405034412937924662, guid: 8a0a17c3f919238429bc36930e4a09b6, type: 3}
