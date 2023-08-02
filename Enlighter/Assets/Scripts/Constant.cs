@@ -36,4 +36,129 @@ public class Constanat : MonoBehaviour
         new Vector3(-41,-39,0),
         new Vector3(-55,-65,0)
     };
+
+    public static List<CardInfo> cardList = new List<CardInfo>
+    {
+        new CardInfo
+        {
+            name ="SharpStone",
+            id = 1,
+            attack = true,
+            healthChange = 5,
+            speedChange = 0,
+            money = 30,
+            invincible = false,
+            price = 150
+        },
+        new CardInfo
+        {
+            name ="BrokenDagger",
+            id = 2,
+            attack = true,
+            healthChange = 10,
+            speedChange = 0,
+            money = 25,
+            invincible = false,
+            price = 250
+        },
+        new CardInfo
+        {
+            name ="ExpiredEnergyDrink",
+            id = 3,
+            attack = true,
+            healthChange = 15,
+            speedChange = 0,
+            money = 20,
+            invincible = false,
+            price = 150
+        },
+        new CardInfo
+        {
+            name ="MobiusBlade",
+            id = 4,
+            attack = true,
+            healthChange = 30,
+            speedChange = 0,
+            money = 5,
+            invincible = false,
+            price = 300
+        },
+        new CardInfo
+        {
+            name ="JarofCompressedEther",
+            id = 5,
+            attack = true,
+            healthChange = 35,
+            speedChange = 0,
+            money = 0,
+            invincible = false,
+            price = 350
+        },
+        new CardInfo
+        {
+            name ="MagicBookwithBlurredCover",
+            id = 6,
+            attack = true,
+            healthChange = 15,
+            speedChange = -0.1f,
+            money = 10,
+            invincible = false,
+            price = 200
+        },
+        new CardInfo
+        {
+            name ="PromisedLand",
+            id = 7,
+            attack = false,
+            healthChange = 0,
+            speedChange = -0.2f,
+            money = 0,
+            invincible = true,
+            price = 700
+        },
+        new CardInfo
+        {
+            name ="GodsPunishment",
+            id = 8,
+            attack = true,
+            healthChange = 25,
+            speedChange = -0.1f,
+            money = 0,
+            invincible = false,
+            price = 450
+        },
+        new CardInfo
+        {
+            name ="LayonHands",
+            id = 9,
+            attack = false,
+            healthChange = 25,
+            speedChange = 0,
+            money = 5,
+            invincible = false,
+            price = 400
+        },
+        new CardInfo
+        {
+            name ="HolyBlessing",
+            id = 10,
+            attack = false,
+            healthChange = 0,
+            speedChange = 0.5f,
+            money = 0,
+            invincible = false,
+            price = 400
+        },
+        new CardInfo
+        {
+            name ="DreamofEnlightenment",
+            id = 11,
+            attack = false,
+            healthChange = 15,
+            speedChange = 0,
+            money = 20,
+            invincible = false,
+            price = 500
+        }
+    };
 }
