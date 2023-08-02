@@ -34,31 +34,25 @@ public class OnlineSkillManager : MonoBehaviour
     public SkillInfo skill;
     public Image img;
     private Transform tf;
-    public PhotonView photonView;
+
     private bool ifLoaded = false;
 
     void Start()
     {
-        //GameObject skillObject = GameObject.Find("Canvas/CharacterSkill");
-        //skillObjects.Add(skillObject);
-        if (photonView.isMine)
-        {
-
-            //for skill image
-            isSelected = false;
-            img = transform.Find("CharacterSkill").GetComponent<Image>();
-            tf = transform.Find("CharacterSkill").GetComponent<Transform>();
-            //skill = player.skill;
-            img.sprite = Resources.Load<Sprite>("Skills/" + skill.name);
-            Debug.Log(skill.name + "loaded");
-            ifStartTimer = false;
-            initialX = tf.localScale.x;
-            initialY = tf.localScale.y;
-            //for filled image
-            filledImage = transform.Find("CharacterSkillCold").GetComponent<Image>();
-            filledImage.sprite = Resources.Load<Sprite>("Skills/fillBackground");
-            filledImage.fillOrigin = 3;
-        }
+        img = transform.Find("CharacterSkill").GetComponent<Image>();
+        tf = transform.Find("CharacterSkill").GetComponent<Transform>();
+        filledImage = transform.Find("CharacterSkillCold").GetComponent<Image>();
+        //for skill image
+        isSelected = false;
+        //skill = player.skill;
+        //img.sprite = Resources.Load<Sprite>("Skills/" + skill.name);
+        Debug.Log(skill.name + "loaded");
+        ifStartTimer = false;
+        initialX = tf.localScale.x;
+        initialY = tf.localScale.y;
+        //for filled image
+        filledImage.sprite = Resources.Load<Sprite>("Skills/fillBackground");
+        filledImage.fillOrigin = 2;
     }
 
     private void Awake()
@@ -111,7 +105,7 @@ public class OnlineSkillManager : MonoBehaviour
     public void OnPointerClick()
     {
         Debug.Log("skill clicked");
-        if (!ifStartTimer && photonView.isMine)
+        if (!ifStartTimer)
         {
             // When the card is clicked, toggle its selection state
             isSelected = !isSelected;
@@ -135,12 +129,12 @@ public class OnlineSkillManager : MonoBehaviour
 
     private void Update()
     {
-        if (skill.name != "" && !ifLoaded && photonView.isMine)
+        if (skill.name != "" && !ifLoaded)
         {
             img.sprite = Resources.Load<Sprite>("Skills/" + skill.name);
             ifLoaded = true;
         }
-        if (ifStartTimer && photonView.isMine)
+        if (ifStartTimer)
         {
             timer += Time.deltaTime;
             filledImage.fillAmount = (coldTime - timer) / coldTime;
