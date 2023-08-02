@@ -26608,6 +26608,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1205992761}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPointerClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
       propertyPath: m_Name
       value: Button1
@@ -26625,13 +26653,45 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7010417331602429058, guid: c827090be9bda484fb44533c69c053c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 765176332}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1205992761}
   m_SourcePrefab: {fileID: 100100000, guid: c827090be9bda484fb44533c69c053c8, type: 3}
 --- !u!224 &1205992759 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7010417331602429058, guid: c827090be9bda484fb44533c69c053c8, type: 3}
   m_PrefabInstance: {fileID: 1205992758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205992760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+  m_PrefabInstance: {fileID: 1205992758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1205992761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205992760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155e049d1ea4a47839183a80fd3518ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  currentPlayer: {fileID: 0}
+  card:
+    id: 0
+    name: 
+    description: 
+    attack: 0
+    invincible: 0
+    healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
 --- !u!4 &1207369075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5313877120419022430, guid: d0023fb38b0bd6f448edf0bd6d204e8c, type: 3}
@@ -48731,6 +48791,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1385842608}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPointerClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
       propertyPath: m_Name
       value: Button1
@@ -48748,13 +48836,45 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7010417331602429058, guid: c827090be9bda484fb44533c69c053c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1499400561}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1385842608}
   m_SourcePrefab: {fileID: 100100000, guid: c827090be9bda484fb44533c69c053c8, type: 3}
 --- !u!224 &1385842606 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7010417331602429058, guid: c827090be9bda484fb44533c69c053c8, type: 3}
   m_PrefabInstance: {fileID: 1385842605}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1385842607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+  m_PrefabInstance: {fileID: 1385842605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1385842608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385842607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155e049d1ea4a47839183a80fd3518ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  currentPlayer: {fileID: 0}
+  card:
+    id: 0
+    name: 
+    description: 
+    attack: 0
+    invincible: 0
+    healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
 --- !u!4 &1386800058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8750982408729424435, guid: 658a8a7289968d84696573f8b52b1c7a, type: 3}
@@ -48874,6 +48994,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1405346544}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPointerClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010417331602429059, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
       propertyPath: m_Name
       value: Button1
@@ -48891,13 +49039,45 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7010417331602429058, guid: c827090be9bda484fb44533c69c053c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 700692512}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1405346544}
   m_SourcePrefab: {fileID: 100100000, guid: c827090be9bda484fb44533c69c053c8, type: 3}
 --- !u!224 &1405346542 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7010417331602429058, guid: c827090be9bda484fb44533c69c053c8, type: 3}
   m_PrefabInstance: {fileID: 1405346541}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1405346543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7010417331602429085, guid: c827090be9bda484fb44533c69c053c8, type: 3}
+  m_PrefabInstance: {fileID: 1405346541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1405346544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405346543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155e049d1ea4a47839183a80fd3518ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  currentPlayer: {fileID: 0}
+  card:
+    id: 0
+    name: 
+    description: 
+    attack: 0
+    invincible: 0
+    healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
 --- !u!1 &1407096868
 GameObject:
   m_ObjectHideFlags: 0
@@ -86397,7 +86577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 3
-  currentPlayer: {fileID: 0}
+  cuurentPlayer: {fileID: 0}
 --- !u!1001 &1671061143
 PrefabInstance:
   m_ObjectHideFlags: 0
