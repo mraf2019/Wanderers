@@ -2,12 +2,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
+using ExitGames.UtilityScripts;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public int playerindex;
+    public List<GameObject> playerPrefab = new List<GameObject>();
     public GameObject gameCanvas;
     public GameObject sceneCamera;
+
+
 
     public int playersLeft;
     public GameObject[] loots = new GameObject[15];
@@ -35,6 +41,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //initialize player
+        playerindex = PlayerPrefs.GetInt("SelectedCharacterIndex");
+
         SpawnPlayer();
         StartCoroutine("RefreshResource");
         PlayerPrefs.SetInt("totalNum", PhotonNetwork.playerList.Length);
@@ -81,7 +90,7 @@ public class GameManager : MonoBehaviour
         //float randomY = positions[idx, 1];
         float randomX = 38;
         float randomY = -84;
-        PhotonNetwork.Instantiate(playerPrefab.name,
+        PhotonNetwork.Instantiate(playerPrefab[playerindex].name,
             new Vector2(this.transform.position.x + randomX, this.transform.position.y + randomY),
             Quaternion.identity,
             0);
