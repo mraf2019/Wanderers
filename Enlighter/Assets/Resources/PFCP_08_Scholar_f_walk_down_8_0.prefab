@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3453591485377563621}
   - component: {fileID: 6669172720995777054}
   - component: {fileID: 538876678917352213}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: GameTag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 5600203641224386680}
   - component: {fileID: 6736760942506954583}
   - component: {fileID: 8933843557937617926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PFCP_08_Scholar_f_walk_down_8_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 4570175224239270014}
   - component: {fileID: 5675909702968338727}
   - component: {fileID: 3285380797221964024}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

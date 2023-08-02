@@ -4593,10 +4593,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!1001 &348015713
 PrefabInstance:
@@ -7434,10 +7439,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &522597868
 MonoBehaviour:
@@ -7828,10 +7838,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!1 &534982336
 GameObject:
@@ -8013,6 +8028,7 @@ MonoBehaviour:
   playerPrefab:
   - {fileID: 2201569341116609583, guid: 5f9f43e42695f4dd1afdbbf32d564d2b, type: 3}
   - {fileID: 5987631851670483016, guid: bcd8d344bb78ba24b9820159bde8d991, type: 3}
+  - {fileID: 3925370395806739157, guid: e34908dcf03d99b46853de696412fb0a, type: 3}
   gameCanvas: {fileID: 1918437408}
   sceneCamera: {fileID: 519420028}
   playersLeft: 3
@@ -25380,7 +25396,6 @@ MonoBehaviour:
     attack: 0
     healthChange: 0
   img: {fileID: 533425229}
-  photonView: {fileID: 1108091199}
 --- !u!114 &1108091199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26401,10 +26416,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!1001 &1185644512
 PrefabInstance:
@@ -45585,10 +45605,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &1310465825
 MonoBehaviour:
@@ -45786,10 +45811,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &1317134292
 MonoBehaviour:
@@ -49133,10 +49163,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &1406006646
 MonoBehaviour:
@@ -51354,10 +51389,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &1544669946
 MonoBehaviour:
@@ -86053,10 +86093,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!1001 &1634475155
 PrefabInstance:
@@ -86176,10 +86221,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &1635255379
 MonoBehaviour:
@@ -89557,10 +89607,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!1001 &1857736959
 PrefabInstance:
@@ -90648,10 +90703,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &1918622343
 MonoBehaviour:
@@ -100325,10 +100385,15 @@ MonoBehaviour:
   initialX: 0
   initialY: 0
   card:
+    id: 0
     name: 
     description: 
     attack: 0
+    invincible: 0
     healthChange: 0
+    speedChange: 0
+    money: 0
+    price: 0
   player: {fileID: 0}
 --- !u!114 &2112494497
 MonoBehaviour:
