@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8515293205402249879}
   - component: {fileID: 83470559612712881}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: RaineIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 3cd4afe77e767ea4bb078f0bd512beb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -519,10 +519,10 @@ MonoBehaviour:
   currency: 1000
   cards: []
   mySkill:
-    name: 
+    name: Ivy
     description: 
-    attack: 0
-    healthChange: 0
+    attack: 1
+    healthChange: -30
   isInvincible: 0
   isSpeedUp: 0
   isSpeedDown: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 6606920303844972423}
   - component: {fileID: 6707985825434300672}
   - component: {fileID: 238089373630885895}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 2492741958169196978}
   - component: {fileID: 7134146439875047164}
   - component: {fileID: 1812974561600548668}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

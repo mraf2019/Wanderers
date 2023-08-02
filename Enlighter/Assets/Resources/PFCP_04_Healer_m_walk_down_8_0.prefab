@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8870484093102440434}
   - component: {fileID: 5520729208935848950}
   - component: {fileID: 1071818516575359813}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 2012136737849938096}
   - component: {fileID: 3074011948372880743}
   - component: {fileID: 8456878866435525134}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
