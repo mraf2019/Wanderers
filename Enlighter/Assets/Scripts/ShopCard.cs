@@ -6,13 +6,13 @@ using UnityEngine.UI;
 [System.Serializable]
 public struct CardInfoRaw
 {
-    [SerializeField] public int name;
-    [SerializeField] public string id;
+    [SerializeField] public string name;
+    [SerializeField] public int id;
     [SerializeField] public string is_attack;
-    [SerializeField] public bool health_change;
-    [SerializeField] public bool speed_change;
+    [SerializeField] public int health_change;
+    [SerializeField] public float speed_change;
     [SerializeField] public int money;
-    [SerializeField] public int invincible;
+    [SerializeField] public bool invincible;
     [SerializeField] public int price;
 }
 

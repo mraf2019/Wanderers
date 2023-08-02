@@ -150,15 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c97a4ffaa43ef40b3f5d1cd138e84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - name: emergency_medicine_kit
-    description: 
-    attack: 0
-    healthChange: 20
-  - name: mutilated_dagger
-    description: 
-    attack: 1
-    healthChange: -20
+  cards: []
 --- !u!114 &1182438523673240892
 MonoBehaviour:
   m_ObjectHideFlags: 0

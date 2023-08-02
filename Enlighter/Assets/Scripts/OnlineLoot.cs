@@ -18,6 +18,13 @@ public class OnlineLoot : MonoBehaviour
             GameObject cardObject = GameObject.Find("Canvas/GameUI/Cards/Card" + i.ToString());
             cardObjects.Add(cardObject);
         }
+        int idx1 = Random.Range(0, 11);
+        int idx2 = Random.Range(0, 11);
+        CardInfo card1 = Constanat.cardList[idx1];
+        cards.Add(card1);
+        CardInfo card2 = Constanat.cardList[idx2];
+        cards.Add(card2);
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -42,4 +49,5 @@ public class OnlineLoot : MonoBehaviour
 
 
     }
+
 }
