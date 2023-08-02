@@ -20,14 +20,6 @@ public class OnlineCard : MonoBehaviour
     {
         img = GetComponent<Image>();
         tf = GetComponent<Transform>();
-        //int l = player.cards.Count;
-        //if (idx < l)
-        //{
-        //    card = player.cards[idx];
-        //    Sprite cardImg = Resources.Load<Sprite>("Cards/"+card.name);
-        //    img.sprite = cardImg;
-        //    active = true;
-        //}
         initialX = tf.localScale.x;
         initialY = tf.localScale.y;
     }
