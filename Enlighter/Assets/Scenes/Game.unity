@@ -24781,7 +24781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coldTime: 5
-  filledImage: {fileID: 0}
+  filledImage: {fileID: 1535967019}
   player: {fileID: 0}
   isSelected: 0
   initialX: 0
@@ -24791,7 +24791,7 @@ MonoBehaviour:
     description: 
     attack: 0
     healthChange: 0
-  img: {fileID: 0}
+  img: {fileID: 533425229}
   photonView: {fileID: 1108091199}
 --- !u!114 &1108091199
 MonoBehaviour:
