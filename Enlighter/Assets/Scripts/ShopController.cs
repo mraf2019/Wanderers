@@ -5,8 +5,9 @@ public class ShopController : MonoBehaviour
 {
     public static ShopController Instance;
     public int count = 3;
+    public OnlinePlayer cuurentPlayer;
+
     private List<GameObject> cardObjects = new List<GameObject>();
-    public OnlinePlayer currentPlayer;
 
     private void Awake()
     {
@@ -22,8 +23,13 @@ public class ShopController : MonoBehaviour
         for (int i = 1; i <= 3; i++)
         {
             GameObject cardObject = GameObject.Find("Canvas/GameUI/ShopUI/Cards/Card" + i.ToString());
-            cardObject.GetComponent<ShopCard>().card = Constanat.cardList[Random.Range(0, 10)];
-            cardObject.GetComponent<ShopCard>().UpdateCard();
+            ShopCard card = cardObject.GetComponent<ShopCard>();
+            card.card = Constanat.cardList[Random.Range(0, 10)];
+            card.UpdateCard();
+            ShopButton shopButton = card.transform.GetChild(0).gameObject.GetComponent<ShopButton>();
+            shopButton.currentPlayer = cuurentPlayer;
+            shopButton.card = card;
+            shopButton.transform.GetChild(1).gameObject.GetComponent<TMPro.TMP_Text>().text = card.card.price.ToString();
             cardObjects.Add(cardObject);
         }
     }

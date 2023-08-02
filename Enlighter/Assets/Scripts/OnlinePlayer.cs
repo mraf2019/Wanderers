@@ -79,6 +79,8 @@ public class OnlinePlayer : Photon.MonoBehaviour
             Move();
             UIHealthBar.instance.Setvalue(currentHealth / (float)maxHealth);
             Cards.cuurentPlayer = this;
+            if(ShopController.Instance)
+                ShopController.Instance.cuurentPlayer = this;
             for (int i = 0; i < 5; i++)
             {
                 Cards.transform.GetChild(i).gameObject.GetComponent<OnlineCard>().player = this;
@@ -150,6 +152,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     {
         if(currency + amount < 0)
             return;
+        Debug.Log(currency + amount);
         UIDecuts.instance.Setvalue(currency + amount);
     }
 
