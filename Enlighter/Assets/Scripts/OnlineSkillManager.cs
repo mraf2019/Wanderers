@@ -130,6 +130,7 @@ public class OnlineSkillManager : MonoBehaviour
 
     public void OnPointerClick()
     {
+        Debug.Log("skill clicked");
         if (!ifStartTimer && photonView.isMine)
         {
             // When the card is clicked, toggle its selection state
