@@ -11,7 +11,7 @@ public struct CardInfo
     [SerializeField] public bool attack;
     [SerializeField] public bool invincible;
     [SerializeField] public int healthChange;
-    [SerializeField] public int speedChange;
+    [SerializeField] public float speedChange;
     [SerializeField] public int money;
     [SerializeField] public int price;
 }
