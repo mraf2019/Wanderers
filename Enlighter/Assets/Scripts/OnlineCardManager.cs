@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class OnlineCardManager : MonoBehaviour
 {
     public static OnlineCardManager Instance; // Singleton instance
-    public Player cuurentPlayer;
+    public OnlinePlayer cuurentPlayer;
 
     private OnlineCard selectedCard;
     private OnlinePlayer selectedPlayer;

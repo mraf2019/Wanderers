@@ -9,27 +9,17 @@ public class OnlineCard : MonoBehaviour
     public float initialX;
     public float initialY;
     public CardInfo card;
-    public GameObject playerPrefab;
+    public OnlinePlayer player;
 
     private bool active = false;
     private Image img;
     private Transform tf;
-    private OnlinePlayer player;
 
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
         tf = GetComponent<Transform>();
-        player = playerPrefab.GetComponent<OnlinePlayer>();
-        int l = player.cards.Count;
-        if (idx < l)
-        {
-            card = player.cards[idx];
-            Sprite cardImg = Resources.Load<Sprite>("Cards/"+card.name);
-            img.sprite = cardImg;
-            active = true;
-        }
         initialX = tf.localScale.x;
         initialY = tf.localScale.y;
     }

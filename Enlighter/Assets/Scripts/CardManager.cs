@@ -103,9 +103,4 @@ public class CardManager : MonoBehaviour
             selectedEnemy = null;
         }
     }
-
-    public static implicit operator CardManager(OnlineCardManager v)
-    {
-        throw new NotImplementedException();
-    }
 }

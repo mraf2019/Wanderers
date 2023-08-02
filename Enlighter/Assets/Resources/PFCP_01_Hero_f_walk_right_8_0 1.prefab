@@ -401,7 +401,7 @@ MonoBehaviour:
   maxHealth: 100
   speed: 4
   cards: []
-  skill:
+  mySkill:
     name: Ivy
     description: 
     attack: 1

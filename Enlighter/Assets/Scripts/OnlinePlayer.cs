@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Cinemachine;
 
 public class OnlinePlayer : Photon.MonoBehaviour
 {
@@ -16,7 +13,7 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public float speed = 4;
 
     public List<CardInfo> cards = new List<CardInfo>();
-    public SkillInfo skill;
+    public SkillInfo mySkill;
 
     private Vector2 lookDirection = new Vector2(1, 0);
     private int currentHealth;
@@ -24,6 +21,8 @@ public class OnlinePlayer : Photon.MonoBehaviour
     public bool isInvincible = false;
     private float invincibleTimer;
     private float timeInvincible = 3.0f;
+
+    private OnlineCardManager Cards;
 
     private void Awake()
     {
@@ -40,9 +39,13 @@ public class OnlinePlayer : Photon.MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Cards = OnlineCardManager.Instance;
         if (photonView.isMine)
         {
             playerCamera.SetActive(true);
+            OnlineSkillManager skill = GameObject.Find("Canvas/GameUI/Skill").GetComponent<OnlineSkillManager>();
+            skill.skill = mySkill;
+            Debug.Log("skillinfo loaded");
         }
     }
 
@@ -52,6 +55,11 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if (photonView.isMine)
         {
             Move();
+            Cards.cuurentPlayer = this;
+            for (int i = 0; i < 5; i++)
+            {
+                Cards.transform.GetChild(i).gameObject.GetComponent<OnlineCard>().player = this;
+            }
         }
         if (isInvincible)
         {

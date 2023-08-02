@@ -22,7 +22,7 @@ public class OnlineSkill : MonoBehaviour
         img = GetComponent<Image>();
         tf = GetComponent<Transform>();
         player = playerPrefab.GetComponent<OnlinePlayer>();
-        skill = player.skill;
+        skill = player.mySkill;
         Sprite skillImg = Resources.Load<Sprite>("Skills/"+skill.name);
         img.sprite = skillImg;
         active = true;
