@@ -24,7 +24,7 @@ public class ShopController : MonoBehaviour
         {
             GameObject cardObject = GameObject.Find("Canvas/GameUI/ShopUI/Cards/Card" + i.ToString());
             ShopCard card = cardObject.GetComponent<ShopCard>();
-            card.card = Constanat.cardList[Random.Range(9, 9)];
+            card.card = Constanat.cardList[Random.Range(0, 11)];
             card.UpdateCard();
             ShopButton shopButton = card.transform.GetChild(0).gameObject.GetComponent<ShopButton>();
             shopButton.currentPlayer = cuurentPlayer;
