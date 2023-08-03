@@ -252,6 +252,6 @@ public class OnlinePlayer : Photon.MonoBehaviour
         if(negative)
             ChangeSpeed(amount,!negative);
         else
-            ChangeSpeed(amount,negative);
+            ChangeSpeed(amount,!negative);
     }
 }
