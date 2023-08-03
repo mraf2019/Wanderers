@@ -180,8 +180,6 @@ public class OnlinePlayer : Photon.MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
         if (currentHealth <= 0)
         {
-            PhotonNetwork.Instantiate("loot", transform.position, Quaternion.identity, 0);
-            gameObject.SetActive(false);
             GameManager.Instance.EndGame();
         }
     }

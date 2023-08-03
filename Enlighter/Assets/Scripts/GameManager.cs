@@ -59,8 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        int playerRemain = PhotonNetwork.playerList.Length;
-        PlayerPrefs.SetInt("rank", playerRemain);
+        
         PhotonNetwork.Disconnect();
         // Show the game over screen or perform other actions
         SceneManager.LoadScene("Result");
@@ -118,6 +117,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        int playerRemain = PhotonNetwork.playerList.Length;
+        PlayerPrefs.SetInt("rank", playerRemain);
         if (PhotonNetwork.playerList.Length == 1)
         {
             EndGame();
