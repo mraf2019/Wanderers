@@ -27,6 +27,78 @@ For `iOS`, switch platform from `Windows` to `iOS`, click build, and choose file
 
 ## engine architecture
 ![image](engine_architecture.png)
+# In Game
+
+### Card handler
+
+- Stores the list of cards collection
+- Fetches the information of one card
+- processes the chartlets and images of the given card
+
+### Deck handler
+
+- Handles the card deck so as to ensure only one card is selected
+- Checks the player is in a right condition when releasing a card
+- Calculates and settles account of a selected card with regard to the information from the card handler
+
+### Player handler
+
+- Records the player's health, card list, various status, currency and location
+- Connects to the UI elements to ensure displaying correctly
+- Handles the player's health, status (speed up/down, invincible), currency, movement (speed and location) and animation while changes happen
+- Fetches user info and character info from the host 
+
+### Skill handler
+
+- Controls the cooldown and effect of the skill
+- Checks the player is in a right condition when releasing the skill
+
+### Loot handler
+
+- Randomly generates loots on the map
+- Changes the player's deck while collecting the loot
+
+### Shop Controller
+
+- Randomly generates three cards for players to purchase 
+- Controls purchasing system
+- connects with player's currency
+
+### Region Controller
+
+- Randomly shuts down regions when the regulated time is coming
+- Produces damage to the player if one is still in such region
+
+### Minimap
+
+- Shows the location of player on the entire map
+
+### Rank handler
+
+- Records the rank of the player given the time of death (1st if never fails)
+
+# Rooms Related
+
+### User info handler
+
+- Uploads username to the host for the game scene to fetch
+- Checks no prior redundant username is given
+
+### Room info handler
+
+- Generates a list of player in the same room
+- Creates a room in terms of a serial number if not even exists
+- Player joins a room if already exists
+
+### Character info handler
+
+- Records which character the player has chosen for later uses
+
+# Result & Rankings
+
+### Result handler
+
+- Produces the result given rank in the game part
 
 
 # APIs and Controller
