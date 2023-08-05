@@ -35,13 +35,13 @@ For `iOS`, switch platform from `Windows` to `iOS`, click build, and choose file
 - Fetches the information of one card
 - processes the chartlets and images of the given card
 
-### Deck handler
+### Deck & action handler
 
 - Handles the card deck so as to ensure only one card is selected
 - Checks the player is in a right condition when releasing a card
 - Calculates and settles account of a selected card with regard to the information from the card handler
 
-### Player handler
+### Player Status handler
 
 - Records the player's health, card list, various status, currency and location
 - Connects to the UI elements to ensure displaying correctly
@@ -58,7 +58,7 @@ For `iOS`, switch platform from `Windows` to `iOS`, click build, and choose file
 - Randomly generates loots on the map
 - Changes the player's deck while collecting the loot
 
-### Shop Controller
+### Trading Controller
 
 - Randomly generates three cards for players to purchase 
 - Controls purchasing system
