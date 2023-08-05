@@ -504,7 +504,9 @@ In the MVP stage, I faced various challenges, including choosing Photon Pun as t
 
 ## Siyi Qian (Kikaze-K)
 
-enemy model and walking animation, minimap, camera motion update  (y-axis depth of field), result page, collect loot, step-by-step tutorial guidance
+Skeletal stage: enemy model and walking animation, minimap, camera motion update (y-axis depth of field), result page, collect loot, step-by-step tutorial guidance
+
+MVP stage: The waiting room page with a player list and a host-only start button, realized the function that resources on the map will refresh after some time, added walk and hit animations for two new characters, rewrote the skill performance for the multiplayer game and updated the skill with cold down time, and realized the result page for players being killed or alive to the end. Besides, I also worked together with my teammates to fix bugs like the camera following a wrong character, players being spawned to a forbidden place (like inside a house model), and minimap display.
 
 ## Qi Lei (LeiQi7)
 
