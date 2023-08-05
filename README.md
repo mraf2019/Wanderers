@@ -410,10 +410,28 @@ None
 ### Main Menu
 Play button is the entry for players who want to start a new game. Tutorial button is designed for beginners as guidance.
 ![image](View_UIUX/1.png)
-Host a game or join a game.
+First you can choose your character.
+![image](View_UIUX/100.png)
+Then host a game or join a game.
 ![image](View_UIUX/2.png)
 ![image](View_UIUX/3.png)
 ![image](View_UIUX/4.png)
+Only the room owner can start the game. Start the game when all players enter the room.
+![image](View_UIUX/200.png)
+This is the UI after entering the game. The health bar is on the top the screen so that players can monitor their status easily. You can walk around, collect loot and attack other enemies like in the tutorial demonstrated in the next section.
+![image](View_UIUX/400.png)
+Since there is limited resources available (will be refreshed frequently), you can find the merchant can buy the cards you want.
+![image](View_UIUX/600.png)
+![image](View_UIUX/700.png)
+![image](View_UIUX/800.png)
+After some time, regions will be shut down gradually. Staying in the shut down region will end up in great amount of constant health decrease.
+![image](View_UIUX/500.png)
+You can use the cards collected or bought from the merchant to heal yourself.
+![image](View_UIUX/900.png)
+![image](View_UIUX/1000.png)
+If you die or live till the end when others die, you will entered the result page that shows your ranking.
+![image](View_UIUX/300.png)
+
 ### Tutorial
 According to the usability test, we add some operation instructions to guide beginners so that they will not be confused.
 First choose your character.
@@ -473,7 +491,7 @@ enemy model and walking animation, minimap, camera motion update  (y-axis depth 
 
 ## Qi Lei (LeiQi7)
 
-Overall map, collision of subjects and characters, skill attack, game status controller, pages linking, database. 
+Overall map, collision of subjects and characters, skill attack, game status controller, pages linking, database, different characters and choosing, player status indicator, some minor features. 
 
 ## Yiwei Zhang (Sunnyvale7)
 
