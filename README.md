@@ -2,9 +2,24 @@
 # Enlighter
 
 # Getting Started
-Unity Hub
+We use `Unity Hub` and `Unity 2022.3.4f1` to develop our game.
 
-Unity 2022.3.4f1
+Download Unity LTS Release version 2022.3.4f1 from https://unity.com/releases/editor/qa/lts-releases. This will automatically download Unity Hub for you. Remember to check you have included the Android Build Support platform while installing.
+
+Open Unity Hub, in the Project panel, click the small arrow beside the `Open` button in the top right corner and choose `Add project from disk`. Then choose the file of our project and click `Add Project` in the bottom right corner. Wait for Unity to complete setup and you can see Unity opening our project.
+
+![image](UnityHub.png)
+
+You can directly play our game in the unity editor by clicking the `play` button right below the top bar.
+
+If you want to build an .exe file to play this game on `Windows`, `Mac`, or `Linux`, click `file` -> `Build Settings` -> `Build` and choose where you want to put your file.
+
+![image](HowToBuild.png)
+
+If you want to build and play on your phone, for `Android`, switch platform from `Windows` to `Android`, click build, and choose file path.
+
+For `iOS`, switch platform from `Windows` to `iOS`, click build, and choose file path.
+
 
 # Model and Engine
 ## story map
