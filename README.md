@@ -69,11 +69,11 @@ For `iOS`, switch platform from `Windows` to `iOS`, click build, and choose file
 - Randomly shuts down regions when the regulated time is coming
 - Produces damage to the player if one is still in such region
 
-### Minimap
+### Minimap and Location Handler
 
 - Shows the location of player on the entire map
 
-### Rank handler
+### Round Status handler
 
 - Records the rank of the player given the time of death (1st if never fails)
 
