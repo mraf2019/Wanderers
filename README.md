@@ -586,7 +586,9 @@ Overall map, collision of subjects and characters, skill attack, game status con
 
 ## Yiwei Zhang (Sunnyvale7)
 
-Health bar UI design (both main character and enemies), character choosing page design, HP function, pages linking, bug fixes.
+Skeletal stage: Health bar UI design (both main character and enemies), character choosing page design, HP function, pages linking, bug fixes.
+
+MVP stage: Realized loading the correct character prefabs and portraits given the choice of user in the character selection stage, Realized various prefabs generating, Designed the shop and currency UIs, Completing the currency and shop system, Designed a UI of game flow of creating and joining games, Completing the speed up/down and invincible status system, Realized username display and some other minor features. Helps fix bugs in aspects of card display, camera following, currency calculation and player spawning.
 
 ## Zefang Wei (mraf2019)
 
