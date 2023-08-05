@@ -402,7 +402,9 @@ MVP stage: Realized loading the correct character prefabs and portraits given th
 
 ## Zefang Wei (mraf2019)
 
-Overall UI design of the game page, health bar UI design (main character)
+Skeletal stage: Overall UI design of the game page, including the layout and the parameters of all visual elements. Health bar UI design (main character)
+
+MVP stage: Attributes and description of the cards. Art design of the cards. Solve server problems of Photon Unity Networking. Test and fix bugs.
 
 ## Wanying Ji (whynotsignin)
 
