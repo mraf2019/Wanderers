@@ -469,7 +469,7 @@ Win the game and reach to the result page of the game.
 
 # Contributions
 
-Here lists contributors and their work till 7/18:
+Here lists contributors and their work till 8/3:
 
 <a href="https://github.com/mraf2019/Wanderers/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mraf2019/Wanderers" />
@@ -483,7 +483,9 @@ https://github.com/mraf2019/Wanderers/graphs/contributors
 
 ## Lan Wang (yexiaosu)
 
-player model and walking animation, start page, collect enemy loot, collect and display cards, use cards to attack/heal, in-game settings menu and help page, art of UI elements
+During the Unity game development, I played a key role in both the skeletal product and MVP stages. In the skeletal phase, I focused on crucial features like the player model, walking animation, and the collection and display of cards. Additionally, I worked on designing the start page, and UI elements, implementing the in-game settings menu, and the help page to enhance user experience.
+
+In the MVP stage, I faced various challenges, including choosing Photon Pun as the server for smooth multiplayer interactions. I handled both front-end and back-end development to enable username setup and room hosting/joining. I also designed the logic for region shutdown and rewrote back-end functions to facilitate multiplayer card usage. Furthermore, I successfully created an RPC function to synchronize player health and hits across devices, ensuring a cohesive gaming experience. I also implemented the back-end of a shop/merchant system for virtual commerce during gameplay. 
 
 ## Siyi Qian (Kikaze-K)
 
