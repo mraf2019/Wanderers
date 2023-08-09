@@ -392,7 +392,9 @@ MVP stage: The waiting room page with a player list and a host-only start button
 
 ## Qi Lei (LeiQi7)
 
-Overall map, collision of subjects and characters, skill attack, game status controller, pages linking, database, different characters and choosing, player status indicator, some minor features. 
+Skeletal stage: Overall map, collision of subjects and characters, skill attack, game status controller, pages linking
+
+MVP stage: Database for all the cards, prefab of different characters and choosing character logics, the determination logic of player status and its indicator, some minor features and bugs. 
 
 ## Yiwei Zhang (Sunnyvale7)
 
